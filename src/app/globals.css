@@ -31,3 +31,9 @@ body {
     text-wrap: balance;
   }
 }
+@font-face {
+  font-family: 'Rift Soft';
+  src: url('/font/regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
