@@ -3,8 +3,8 @@
     <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
     <title>Group</title>
     <desc>Created with Sketch.</desc>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="ic/feature/removable-visor" transform="translate(-9.000000, -10.000000)" fill-rule="nonzero" stroke="#FFFFFF" stroke-width="2">
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fillRule="evenodd">
+        <g id="ic/feature/removable-visor" transform="translate(-9.000000, -10.000000)" fillRule="nonzero" stroke="#FFFFFF" stroke-width="2">
             <g id="Group" transform="translate(10.000000, 11.000000)">
                 <g id="Group-Copy" transform="translate(11.000000, 0.000000)" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M14,17.5 C15.9057167,15.7576116 20.452352,10.5939684 31.0279891,7.6808442 M21.3922984,20.9791252 C23.7084424,19.624638 26.9601271,17.8669633 30.9534559,16.3461136 M30.973013,25.7472215 C29.2168509,25.3686571 27.3521778,25.6748954 25.7842666,26.6559381 L20.0132549,30.2668625 C18.000814,31.5260477 15.4873356,31.6794838 13.3366738,30.6744365 L2.49877664,25.6096843 C1.09780213,24.9549809 0.492829875,23.2885247 1.14753329,21.8875502 C1.14868652,21.8850824 1.14984335,21.8826163 1.15100377,21.880152 C6.77199789,9.94295829 16.7485371,2.90260424 31.0806214,0.759089832" id="Shape"></path>
