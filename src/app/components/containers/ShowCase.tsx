@@ -21,7 +21,7 @@ const ShowCase: React.FC<ShowCaseProps> = ({ title, description, image,icon ,var
       className="p-2 cursor-pointer pointer-events-auto w-15 h-15 border-2 border-gray-400 border-opacity-30 float-left relative mr-3.5 rounded-lg box-border transition-all duration-300 flex justify-center items-center"
     >
      
-      <Image height={30} width={30} src={ico} alt="icon"></Image>
+      <Image height={30} width={30} src={ico} alt="icon"/>
     </a>)
   });
   return (
@@ -34,7 +34,7 @@ const ShowCase: React.FC<ShowCaseProps> = ({ title, description, image,icon ,var
       animate="enter"
       transition={{ type: "linear", duration: 2}}
     >
-          <Image src={image} alt="mockup" width={1500} height={1500}></Image>
+          <Image src={image} alt="mockup" width={1500} height={1500}/>
     </motion.main>
    
         </div>
