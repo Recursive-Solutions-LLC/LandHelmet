@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -10,6 +10,7 @@ interface ShowCaseProps {
   icon: string[];
   variants: any;
 }
+
 
 const ShowCase: React.FC<ShowCaseProps> = ({
   title,
