@@ -3,7 +3,7 @@ import About1 from "./components/containers/About";
 import Footer from "./components/layout/Footer";
 import Details from "./components/containers/Details";
 import Header from "./components/containers/Header";
-
+import Image from "next/image";
 export default function Home() {
   const variants = {
     hidden: { opacity: 0, x: -200, y: 0 },
