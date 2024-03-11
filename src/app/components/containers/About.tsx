@@ -5,7 +5,7 @@ const About1 = () => {
   return (
     <>
 <section className="">
-  <div className="flex flex-wrap mx-auto md:flex-nowrap p-12">
+  <div className="flex flex-wrap mx-auto">
 
     <a href="">
       <div className="flex w-full">
