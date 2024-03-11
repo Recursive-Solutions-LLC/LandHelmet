@@ -33,14 +33,15 @@ const ShowCase: React.FC<ShowCaseProps> = ({
   
   return (
     <div className="flex min-h-screen flex-row items-center justify-between p-15">
-      <div className="z-10  w-full items-center justify-between font-mono text-sm lg:flex">
-        <div className="flex">
-          <motion.main
+       <motion.main
             variants={variants}
             initial="hidden"
             animate="enter"
             transition={{ type: "linear", duration: 2 }}
           >
+      <div className="z-10  w-full items-center justify-between font-mono text-sm lg:flex">
+        <div className="flex">
+         
             <Image src={image} alt="helmet" width={1500} height={1500} />
             <span className="flex flex-row bottom-0  transform absolute   border-2   rounded-full">
 
@@ -48,12 +49,12 @@ const ShowCase: React.FC<ShowCaseProps> = ({
         <Image className="p-2" height={30} width={30} src="/images/icon_info.svg" alt="icon" />
    
             </span>
-          </motion.main>
+       
         </div>
 
         <div className=" place-self-center mt-5 lg:col-span-7">
           <div className="grid grid-cols-6 lg:mx-24  ">{IconHtml}</div>
-          <h1 className="font-custom max-w-4xl lg:mx-24  font-semibold  mb-4 mt-8  text-3xl  tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
+          <h1 className="font-custom max-w-4xl lg:mx-24  font-custom  mb-4 mt-8  text-3xl  tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
             {title}
           </h1>
           <p className="max-w-5xl lg:mx-24 mb-6 font-light text-gray-500  lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
@@ -61,6 +62,7 @@ const ShowCase: React.FC<ShowCaseProps> = ({
           </p>
         </div>
       </div>
+      </motion.main>
     </div>
   );
 };
