@@ -55,10 +55,10 @@ const ShowCase: React.FC<ShowCaseProps> = ({
 
         <div className=" place-self-center mt-5 lg:col-span-7">
           <div className="grid grid-cols-6 lg:mx-24  ">{IconHtml}</div>
-          <h1 className="font-custom max-w-4xl lg:mx-24  font-custom  mb-4 mt-8  text-3xl  tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
+          <h1 className=" max-w-4xl lg:mx-24  font-custom  mb-4 mt-8  text-3xl  tracking-tight leading-none md:text-5xl xl:text-6xl ">
             {title}
           </h1>
-          <p className="max-w-5xl lg:mx-24 mb-6 font-light text-gray-500  lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+          <p className="max-w-5xl lg:mx-24 mb-6 font-light text-gray-500  lg:mb-8 md:text-lg lg:text-xl ">
             {description}
           </p>
         </div>
