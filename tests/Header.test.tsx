@@ -1,6 +1,5 @@
 import { render, screen, cleanup, fireEvent, waitFor } from '@testing-library/react';
 import Header from '@/app/components/containers/Header';
-import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import { CreateMatchMedia } from './helpers';
 
