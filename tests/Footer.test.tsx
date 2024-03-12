@@ -1,4 +1,4 @@
-import { render, screen, cleanup, fireEvent, waitFor } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Footer from '@/app/components/layout/Footer';
 
