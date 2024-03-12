@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import ShowCase from "@/app/components/containers/ShowCase";
 import '@testing-library/jest-dom';
+import { CheckSrcInArray } from './helpers';
 
 
 describe('testing ProductShowcase component', () => {
@@ -58,7 +59,7 @@ describe('testing ProductShowcase component', () => {
         icons.forEach(icon => {
             expect(icon).toBeInTheDocument();                           // check that rendered
             expect(icon.src).toBeDefined();                             // check that has an src
-            expect(checkSrcInArray(icon.src, totalIcons)).toBeTruthy();    // check that rendered OUR images
+            expect(CheckSrcInArray(icon.src, totalIcons)).toBeTruthy(); // check that rendered OUR images
             expect(icon.width).toBe(30);                                // check that has the right width
             expect(icon.height).toBe(30);                               // check that has the right height
         });
@@ -91,17 +92,3 @@ describe('testing ProductShowcase component', () => {
         expect(descTag).toHaveTextContent(description); // check that element has the right content
     });
 });
-
-//this function is for checking if an image src is contained in an array
-function checkSrcInArray(imgSrc: string, arrayOfSrc: string[])
- {
-    // remember that array.forEach will continue iterating, even if you return
-    for(let x = 0, len = arrayOfSrc.length; x < len; x++) {
-        // if the image src includes the current array element
-        if(imgSrc.includes(arrayOfSrc[x])) {
-            return true;
-        }
-    }
-
-    return false;
- }
