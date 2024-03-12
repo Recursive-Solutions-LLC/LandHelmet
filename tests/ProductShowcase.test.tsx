@@ -12,7 +12,7 @@ describe('testing ProductShowcase component', () => {
     }
 
     const imgSrc = "/images/helmet-feature1@2x.png";
-    const iconSrc = ['/images/icon_pc.svg',"/images/icon_inmold.svg"];
+    const iconSrc = ["/images/icon_pc.svg", "/images/icon_inmold.svg"];
     const title = "NOT JUST AN ORDINARY SHELL";
     const description = "InMould technology makes the helmet lighter and very firm. This technology is currently the best one for making ultralight helmets and providing you maximum protection. How does InMould work? Expandable polystyrene is injected into our polycarbonate shells under pressure, heat and steam. The inner and outer shell are just one piece, they will not separate, so you can enjoy your ride to the fullest." ;
     
@@ -31,7 +31,7 @@ describe('testing ProductShowcase component', () => {
 
     it('the image of the component should render ok and should use the parametered image', () => {
         //we extract the image from the rendering mock screen
-        const img = screen.getByAltText("mockup") as HTMLImageElement;
+        const img = screen.getByAltText("helmet") as HTMLImageElement;
 
         expect(img).toBeDefined();                  // check that the ecm6 is working great
         expect(img).toBeInTheDocument();            // check that the image is rendered in the document
@@ -52,12 +52,13 @@ describe('testing ProductShowcase component', () => {
 
         //screen.debug(icons)
 
-        expect(icons.length).toBe(iconSrc.length);  //check that we have the right number of icons
+        const totalIcons = [...iconSrc, '/images/icon_info.svg'];   //this is for the static icon added
+        expect(icons.length).toBe(totalIcons.length);               //check that we have the right number of icons
 
         icons.forEach(icon => {
             expect(icon).toBeInTheDocument();                           // check that rendered
             expect(icon.src).toBeDefined();                             // check that has an src
-            expect(checkSrcInArray(icon.src, iconSrc)).toBeTruthy();    // check that rendered OUR images
+            expect(checkSrcInArray(icon.src, totalIcons)).toBeTruthy();    // check that rendered OUR images
             expect(icon.width).toBe(30);                                // check that has the right width
             expect(icon.height).toBe(30);                               // check that has the right height
         });
