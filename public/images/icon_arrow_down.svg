@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="7px" height="5px" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="7px" height="5px" className="text-black" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
     <title>Triangle</title>
     <desc>Created with Sketch.</desc>
     <g id="1.0.-Design" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-        <g id="Menu-Sticky" transform="translate(-727.000000, -38.000000)" fill="#FFFFFF" fillRule="nonzero">
+        <g id="Menu-Sticky" transform="translate(-727.000000, -38.000000)" fill="#FFFFFF" >
             <g id="Header" transform="translate(0.000000, -2700.000000)">
                 <g id="Btn" transform="translate(727.000000, 2730.000000)">
                     <path d="M3.79492349,8.42131927 L6.60348749,12.4335536 C6.71750472,12.5964353 6.67789219,12.8209063 6.51501045,12.9349235 C6.45450037,12.9772805 6.38242596,13 6.30856401,13 L0.691435994,13 C0.492613487,13 0.331435998,12.8388225 0.331435998,12.64 C0.331435998,12.566138 0.354155455,12.4940636 0.396512506,12.4335536 L3.20507651,8.42131927 C3.31909373,8.25843752 3.5435647,8.218825 3.70644644,8.33284222 C3.74087732,8.35694384 3.77082188,8.38688839 3.79492349,8.42131927 Z" id="Triangle" transform="translate(3.500000, 10.500000) rotate(-180.000000) translate(-3.500000, -10.500000) "></path>

@@ -6,7 +6,7 @@ import { Fragment } from "react";
 
 const Header = () => {
     return (
-        <Popover className={"font-custom container mx-auto flex items-center border-b-2 px-6 py-2 h-24 z-999"}>
+        <Popover className={"font-custom text-[#000] container mx-auto flex items-center border-b-2 border-black text-2xl px-6 py-2 h-24 mb-8 z-999"}>
             <h1 className="font-bold">Page Title</h1>
             <div className="grow">
                 <div className="hidden md:flex items-center justify-center gap-2 md:gap-8">

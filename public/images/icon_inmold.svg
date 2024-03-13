@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="40px" height="40px" className="text-black" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
     <title>Group</title>
     <desc>Created with Sketch.</desc>
-    <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-        <g id="ic/feature/inmold/hover" transform="translate(-10.000000, -10.000000)" fillRule="nonzero" stroke="#FFFFFF">
+    <g id="Symbols" stroke="none" strokeWidth="1" fill="#000" fillRule="evenodd">
+        <g id="ic/feature/inmold/hover" transform="translate(-10.000000, -10.000000)"  stroke="#000s">
             <g id="Group" transform="translate(12.000000, 12.000000)">
                 <path d="M38,12 C23.6405965,12 12,23.6405965 12,38" id="Path" strokeWidth="3"></path>
                 <path d="M38,0 C17.0131795,0 0,17.0131795 0,38" id="Path" strokeWidth="3"></path>

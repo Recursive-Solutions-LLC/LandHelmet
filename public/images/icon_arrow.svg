@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="23px" height="5px" viewBox="0 0 23 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="23px" height="5px" className="text-black" viewBox="0 0 23 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
     <title>arrow</title>
     <desc>Created with Sketch.</desc>
     <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-        <path d="M18,3 L0,3 L0,2 L18,2 L18,-2.53282383e-14 L23,2.5 L18,5 L18,3 Z" id="arrow" fill="#FFFFFF" fillRule="nonzero"></path>
+        <path d="M18,3 L0,3 L0,2 L18,2 L18,-2.53282383e-14 L23,2.5 L18,5 L18,3 Z" id="arrow" fill="#FFFFFF" ></path>
     </g>
 </svg>
