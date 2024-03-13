@@ -2,19 +2,29 @@
 import Link from "next/link"
 import { Popover, Transition } from "@headlessui/react"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid";
-import { Fragment } from "react";
+import { FC, Fragment } from "react";
+import HeaderNavItem from "../model/HeaderNavItem";
+import { NavItems, SubNavItems } from "../model/NavItem";
 
-const Header = () => {
+interface HeaderProps {
+    navItems: NavItems[];
+    subNavItems: SubNavItems[][];
+  }
+  
+
+const Header: FC<HeaderProps> = ({ navItems, subNavItems }) => {
     return (
-        <Popover className={"font-custom text-[#000] container mx-auto flex items-center border-b-2 border-black text-2xl px-6 py-2 h-24 mb-8 z-999"}>
+        <Popover className={"font-custom text-[#000] container mx-auto flex justify-between items-center border-b-2 border-black text-2xl px-6 py-2 h-24 mb-8 z-1"}>
             <h1 className="font-bold">Page Title</h1>
             <div className="grow">
-                <div className="hidden md:flex items-center justify-center gap-2 md:gap-8">
-                    <Link href="/">Home</Link>
-                    <Link href="/about-us">About Us</Link>
-                    <Link href="/">Home</Link>
-                    <Link href="/">Home</Link>
-                    <Link href="/">Home</Link>
+                <div className="hidden md:flex items-center justify-end mr-10 gap-2 md:gap-8">
+                    {navItems.map((navItem, index) => (
+                        <HeaderNavItem
+                            key={index}
+                            navItem={navItem}
+                            subNavItems={subNavItems[index] || []}
+                        />
+                    ))}
                 </div>
             </div>
             <div className="flex grow items-center justify-end md:hidden">
@@ -38,7 +48,7 @@ const Header = () => {
                 leaveTo="opacity-0 scale-95"
             >
                 <Popover.Panel focus className="absolute inset-x-0 top-0 right-0 origin-top-right transform p-2
-                transition md:hidden block opacity-100 z-998">
+                transition md:hidden block opacity-100">
                     <div className="rounded-lg bg-[#fff] shadow-lg ring-1  divide-y-2 opacity-100 block
                     divide-gray-50">
                         <div className="px-5 pt-5 pb-6 opacity-100">
@@ -55,35 +65,19 @@ const Header = () => {
                             </div>
                             <div className="mt-6 opacity-100">
                                 <nav className="grid gap-y-8">
-                                    <Link href="/" className="text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 px-2">Home</Link>
-                                    <Link href="/" className="text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 px-2">Home</Link>
-                                    <Link href="/" className="text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 px-2">Home</Link>
-                                    <Link href="/" className="text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 px-2">Home</Link>
-                                    <Link href="/" className="text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 px-2">Home</Link>
+                                    {navItems.map((navItem, index) => (
+                                        <HeaderNavItem
+                                            key={index}
+                                            navItem={navItem}
+                                            subNavItems={subNavItems[index] || []}
+                                        />
+                                    ))}
                                 </nav>
-                            </div>
-                            <div className="mt-6 flex flex-col items-center gap-2 opacity-100">
-                                <Link href="register" className="rounded-md bg-[#fff] px-4 py-2 text-sm font-medium text-black md:text-xl w-full border-2
-                                focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500">
-                                    Sign up
-                                </Link>
-                                <Link href="register" className="rounded-md bg-gray-500 px-4 py-2 text-sm font-medium md:text-xl w-full
-                                focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500">
-                                    Login
-                                </Link>
-                            </div>
+                            </div>      
                         </div>
                     </div>
                 </Popover.Panel>
             </Transition>
-            <div className="hidden md:block">
-                <Link href="register" className="mr-4 font-bold">
-                    Sign up
-                </Link>
-                <Link href="register" className="font-bold">
-                    Login
-                </Link>
-            </div>
         </Popover>
     );
 };
