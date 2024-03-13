@@ -8,6 +8,8 @@
 
 # testing
 /coverage
+package-lock.json
+/tests/__snapshots__
 
 # next.js
 /.next/

@@ -58,7 +58,7 @@ const ShowCase: React.FC<ShowCaseProps> = ({
             <h1 className="font-custom max-w-4xl lg:mx-24  font-custom  mb-4 mt-8  text-3xl  tracking-tight leading-none md:text-5xl xl:text-6xl text-black">
               {title}
             </h1>
-            <p className="max-w-5xl lg:mx-24 mb-6 font-light text-text-black  lg:mb-8 md:text-lg lg:text-xl dark:text-black">
+            <p className="max-w-5xl lg:mx-24 mb-6 font-light text-black  lg:mb-8 md:text-lg lg:text-xl dark:text-black">
               {description}
             </p>
           </div>
