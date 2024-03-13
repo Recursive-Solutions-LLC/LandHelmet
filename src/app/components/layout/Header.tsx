@@ -11,7 +11,7 @@ const Header = () => {
             <div className="grow">
                 <div className="hidden md:flex items-center justify-center gap-2 md:gap-8">
                     <Link href="/">Home</Link>
-                    <Link href="/">Home</Link>
+                    <Link href="/about-us">About Us</Link>
                     <Link href="/">Home</Link>
                     <Link href="/">Home</Link>
                     <Link href="/">Home</Link>

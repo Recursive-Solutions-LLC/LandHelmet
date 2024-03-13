@@ -3,8 +3,8 @@
     <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
     <title>Group 2</title>
     <desc>Created with Sketch.</desc>
-    <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-        <g id="ic/feature/air-vents" transform="translate(-11.000000, -11.000000)"  stroke="#FFFFFF" strokeWidth="2">
+    <g id="Symbols" stroke="none" strokeWidth="1" fill="#000000" fillRule="evenodd">
+        <g id="ic/feature/air-vents" transform="translate(-11.000000, -11.000000)"  stroke="#000000" strokeWidth="2">
             <g id="Group-2" transform="translate(11.000000, 12.000000)">
                 <path d="M32,18 C35.3137085,18 38,15.3137085 38,12 C38,8.6862915 35.3137085,6 32,6 C30.3412949,6 28.8397946,6.67307415 27.753722,7.76099969" id="Shape-Copy-4"></path>
                 <path d="M17,12 C20.3137085,12 23,9.3137085 23,6 C23,2.6862915 20.3137085,0 17,0 C15.3412949,0 13.8397946,0.673074153 12.753722,1.76099969" id="Shape-Copy-5"></path>
