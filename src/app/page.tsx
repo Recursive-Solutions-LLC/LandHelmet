@@ -9,6 +9,7 @@ import { Product,DetailProps } from "../app/components/model/Product";
 import { NavItems, SubNavItems } from "./components/model/NavItem";
 import ParallaxText from "../app/components/containers/MagicScroll"
 import ItemProduct from "./components/containers/ItemProduct";
+import Parallax from "./components/containers/parallax/Parallax";
 export default function Home() {
   const variants = {
     hidden: { opacity: 0, x: -200, y: 0 },
@@ -57,7 +58,12 @@ const subNavItems:SubNavItems[][]= [
         <About1/>
         <Quote/>
         <section>
+        <Parallax  className="w-screen h-screen"  type={"services"}/>
+        <Parallax  className="w-screen h-screen"  type={""}/>
+        </section>
   
+        <section>
+        
       <ParallaxText baseVelocity={5}> <ItemProduct title="NOT JUST AN ORDINARY SHELL" description="InMould technology makes the helmet lighter and very firm. This technology is currently the best one for making ultralight helmets and providing you maximum protection. How does InMould work? Expandable polystyrene is injected into our polycarbonate shells under pressure, heat and steam. The inner and outer shell are just one piece, they will not separate, so you can enjoy your ride to the fullest." image="/images/helmet-feature1@2x.png" icon={[]} variants={undefined} />
      </ParallaxText>
      
