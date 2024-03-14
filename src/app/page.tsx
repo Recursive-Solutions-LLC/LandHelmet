@@ -16,7 +16,7 @@ import { motion, useScroll } from "framer-motion";
 export default function Home() {
   const variants = {
     hidden: { opacity: 0, x: -200, y: 0 },
-    enter: { opacity: 0.8, x: 0, y: 0},
+    enter: { opacity: 1, x: 0, y: 0},
   }
   const { scrollYProgress } = useScroll();
   const products: Product[] = [{
