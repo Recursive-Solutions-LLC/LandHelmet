@@ -5,17 +5,19 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid";
 import { FC, Fragment } from "react";
 import HeaderNavItem from "../model/HeaderNavItem";
 import { NavItems, SubNavItems } from "../model/NavItem";
-
+import Image from "next/image";
 interface HeaderProps {
     navItems: NavItems[];
     subNavItems: SubNavItems[][];
-  }
-  
+}
+
 
 const Header: FC<HeaderProps> = ({ navItems, subNavItems }) => {
     return (
         <Popover className={"font-custom text-[#000] container mx-auto flex justify-between items-center border-b-2 border-black text-2xl px-6 py-2 h-24 mb-8 z-1"}>
-            <h1 className="font-bold">Page Title</h1>
+            <a className="flex-none text-xl font-custom text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#" aria-label="Brand">
+                <Image src="/images/logo.png" width={170} height={50} alt="logo" className="invert"/>
+            </a>
             <div className="grow">
                 <div className="hidden md:flex items-center justify-end mr-10 gap-2 md:gap-8">
                     {navItems.map((navItem, index) => (
@@ -73,11 +75,37 @@ const Header: FC<HeaderProps> = ({ navItems, subNavItems }) => {
                                         />
                                     ))}
                                 </nav>
-                            </div>      
+                            </div>
                         </div>
                     </div>
                 </Popover.Panel>
             </Transition>
+            <a
+              className="hidden md:flex inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-gray-900 to-gray-700 hover:from-gray-900 hover:to-gray-600 border border-transparent text-white text-sm font-medium rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-3 px-4 dark:focus:ring-offset-gray-800"
+              href="#"
+            >
+              GET A QUOTE
+              <svg
+                className=" size-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  {" "}
+                  <path
+                    d="M16.3153 16.6681C15.9247 17.0587 15.9247 17.6918 16.3153 18.0824C16.7058 18.4729 17.339 18.4729 17.7295 18.0824L22.3951 13.4168C23.1761 12.6357 23.1761 11.3694 22.3951 10.5883L17.7266 5.9199C17.3361 5.52938 16.703 5.52938 16.3124 5.91991C15.9219 6.31043 15.9219 6.9436 16.3124 7.33412L19.9785 11.0002L2 11.0002C1.44772 11.0002 1 11.4479 1 12.0002C1 12.5524 1.44772 13.0002 2 13.0002L19.9832 13.0002L16.3153 16.6681Z"
+                    fill="#ffffff"
+                  ></path>{" "}
+                </g>
+              </svg>
+            </a>
         </Popover>
     );
 };

@@ -11,7 +11,7 @@ import { NavItems, SubNavItems } from "./components/model/NavItem";
 export default function Home() {
   const variants = {
     hidden: { opacity: 0, x: -200, y: 0 },
-    enter: { opacity: 0.8, x: 0, y: 0},
+    enter: { opacity: 1, x: 0, y: 0},
   }
   const products: Product[] = [{
     title: "What is Lorem Ipsum?",

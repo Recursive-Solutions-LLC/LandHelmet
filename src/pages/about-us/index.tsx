@@ -10,6 +10,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../../app/globals.css";
 import { NavItems, SubNavItems } from "@/app/components/model/NavItem";
+import Cover from "@/app/components/containers/AboutCover";
 
 const AboutUs = () => {
   const navItems: NavItems[] = [
@@ -30,8 +31,7 @@ const AboutUs = () => {
   return (
     <>
       <Header navItems={navItems} subNavItems={subNavItems} />
-
-
+        < Cover title={"About Us"} image={"/images/about-us.png"}/>
       <Footer />
     </>
   );
