@@ -62,3 +62,16 @@ body {
   display: flex;
   flex-wrap: nowrap;
 }
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+
+  background: #B0A47F;
+
+  transform-origin: 0%;
+  z-index: 100;
+}

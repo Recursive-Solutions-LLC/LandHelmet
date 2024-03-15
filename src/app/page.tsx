@@ -19,6 +19,7 @@ export default function Home() {
     enter: { opacity: 1, x: 0, y: 0},
   }
   const { scrollYProgress } = useScroll();
+
   const products: Product[] = [{
     title: "What is Lorem Ipsum?",
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
@@ -51,7 +52,10 @@ const subNavItems:SubNavItems[][]= [
   ]
 ];
   return (
-    <>
+    <>  <motion.div
+    className="progress-bar rounded-lg"
+    style={{ scaleX: scrollYProgress }}
+  />
       <Header  navItems={navItems} subNavItems={subNavItems}/>
    
       <ServiceInfo img="url(/images/service.jpg)" title="What is Lorem Ipsum?" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book" subtitle="PREPARED TO PRODUCE YOUR COMPONENTS IN HIGH VOLUME"/>
