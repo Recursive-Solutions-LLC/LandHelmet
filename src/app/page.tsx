@@ -71,13 +71,13 @@ export default function Home() {
         </section>
 
         <section>
-
+        
+      <ParallaxText baseVelocity={5}> <ItemProduct title="NOT JUST AN ORDINARY SHELL" description="InMould technology makes the helmet lighter and very firm. This technology is currently the best one for making ultralight helmets and providing you maximum protection. How does InMould work? Expandable polystyrene is injected into our polycarbonate shells under pressure, heat and steam. The inner and outer shell are just one piece, they will not separate, so you can enjoy your ride to the fullest." image="/images/helmet-feature1@2x.png" icon={[]} variants={undefined} />
+     </ParallaxText>
      
     </section>
-
-    
       </main>
-      <Banner title={"Heating in winter, <br/> cooling in summer"} svgs={['/images/icon_pc_white.svg','/images/icon_pc_white.svg','/images/icon_pc_white.svg']}/>
+      <Banner title={"Heating in winter, <br/> cooling in summer"} svgs={[{title:"Lore Ip",svg:'/images/icon_pc_white.svg'},{title:"Lore Ip",svg:'/images/icon_pc_white.svg'},{title:"Lore Ip",svg:'/images/icon_pc_white.svg'}]}/>
       <Footer />
     </>
   );
