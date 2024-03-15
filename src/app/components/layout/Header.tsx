@@ -13,7 +13,10 @@ interface HeaderProps {
 
 
 const Header: FC<HeaderProps> = ({ navItems, subNavItems }) => {
+
     return (
+        
+
         <Popover className={"font-custom text-[#000] container mx-auto flex justify-between items-center border-b-2 border-black text-2xl px-6 py-2 h-24 mb-8 z-1"}>
             <a className="flex-none text-xl font-custom text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#" aria-label="Brand">
                 <Image src="/images/logo.png" width={170} height={50} alt="logo" className="invert"/>

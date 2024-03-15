@@ -19,6 +19,7 @@ const ShowCase: React.FC<ShowCaseProps> = ({
   icon,
   variants,
 }) => {
+  
   const IconHtml = icon.map((ico) => {
     // eslint-disable-next-line react/jsx-key
     return (
@@ -33,10 +34,16 @@ const ShowCase: React.FC<ShowCaseProps> = ({
   });
 
   return (
-    <motion.div  initial={{opacity:0.5 , scale:0.5}} transition={{duration:2}} whileInView={{opacity:1, scale:1}} className="flex  flex-row items-center justify-between ">
-      <motion.main drag
+    <motion.div  initial={{opacity:0.5 , scale:0.5} }  transition={{duration:2}} whileInView={{opacity:1, scale:1}} className="flex  flex-row items-center justify-between ">
+      <motion.main drag  dragConstraints={{
+      top: -50,
+      left: -50,
+      right: 50,
+      bottom: 50,
+    }}
         variants={variants}
         initial="hidden"
+
         animate="enter"
         transition={{ type: "linear", duration: 2 }}
       >
