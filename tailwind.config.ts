@@ -14,7 +14,8 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {
-        'custom': ['"Rift Soft"', 'Helvetica', 'Arial', 'sans-serif'],
+        'title':"Rift Soft",
+        'body': 'sans-serif'
       },
     },
   },

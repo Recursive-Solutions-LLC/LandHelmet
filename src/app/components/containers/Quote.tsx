@@ -6,7 +6,7 @@ const Quote = () => {
     <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
         <div>
-          <h1 className="tracking-tight leading-none font-custom block text-3xl  text-black sm:text-4xl lg:text-6xl lg:leading-tight dark:text-black">
+          <h1 className="tracking-tight leading-none font-title block text-3xl  text-black sm:text-4xl lg:text-6xl lg:leading-tight dark:text-black">
             Start your journey with{" "}
             <span className="text-blsck">LandHelmet</span>
           </h1>
