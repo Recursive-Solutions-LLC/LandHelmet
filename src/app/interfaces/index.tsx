@@ -1,9 +1,14 @@
 import { ReactNode } from 'react';
 
-export interface ServiceInfoProps extends ServiceInfoContainerProps {
+export interface ServiceInfoProps extends ServiceInfoContentProps {
     image?: ImageType
 }
-export interface ServiceInfoContainerProps {
+export interface ServiceInfoContainerProps extends ServiceInfoContentProps {
+
+    hasImage: boolean
+}
+
+export interface ServiceInfoContentProps {
     title: string;
     subtitle?: string;
     text?: string;
@@ -12,10 +17,12 @@ export interface ServiceInfoContainerProps {
 
 
 export type ImageType =  {
-    src: string;
+    srcDesktop: string;
+    srcMobile: string;
+
     alt: string;
-    width: ImageDimension
-    height: ImageDimension
+    width?: ImageDimension
+    height?: ImageDimension
 }
 
 type ImageDimension = number | undefined;
