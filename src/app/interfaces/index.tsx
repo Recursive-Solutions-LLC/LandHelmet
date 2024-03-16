@@ -12,10 +12,12 @@ export interface ServiceInfoContainerProps {
 
 
 export type ImageType =  {
-    src: string;
+    srcDesktop: string;
+    srcMobile: string;
+
     alt: string;
-    width: ImageDimension
-    height: ImageDimension
+    width?: ImageDimension
+    height?: ImageDimension
 }
 
 type ImageDimension = number | undefined;

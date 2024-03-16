@@ -59,21 +59,25 @@ export default function Home() {
     />
       <Header navItems={navItems} subNavItems={subNavItems} />
 
-      <ServiceInfo title="Lorem ipsum Donor on Ipmsum" />
-      <ServiceInfo 
-      title="Lorem ipsum Donor on Ipmsum" 
-      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lacus dui, fringilla auctor placerat venenatis, pharetra nec tortor. Nulla tincidunt risus at leo sagittis pharetra. Vestibulum malesuada nibh est, a finibus diam efficitur vitae. Fusce gravida risus et imperdiet eleifend. Ut felis nisi, auctor ac ullamcorper a, cursus et turpis. Etiam vulputate hendrerit leo ac feugiat. Duis suscipit felis a leo ultricies, suscipit pharetra purus egestas.
+
+      <ServiceInfo
+        title="Lorem ipsum Donor on Ipmsum"
+        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lacus dui, fringilla auctor placerat venenatis, pharetra nec tortor. Nulla tincidunt risus at leo sagittis pharetra. Vestibulum malesuada nibh est, a finibus diam efficitur vitae. Fusce gravida risus et imperdiet eleifend. Ut felis nisi, auctor ac ullamcorper a, cursus et turpis. Etiam vulputate hendrerit leo ac feugiat. Duis suscipit felis a leo ultricies, suscipit pharetra purus egestas.
 
       "
-       />
-             <ServiceInfo 
-      title="Lorem ipsum Donor on Ipmsum" 
-      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lacus dui, fringilla auctor placerat venenatis, pharetra nec tortor. Nulla tincidunt risus at leo sagittis pharetra. Vestibulum malesuada nibh est, a finibus diam efficitur vitae. Fusce gravida risus et imperdiet eleifend. Ut felis nisi, auctor ac ullamcorper a, cursus et turpis. Etiam vulputate hendrerit leo ac feugiat. Duis suscipit felis a leo ultricies, suscipit pharetra purus egestas.
+      />
+      <ServiceInfo image={{ alt: "image of pactory", 
+      srcDesktop: "/public/images/services/banners/quality/desktop/quality.png", 
+      srcMobile: ""
+      }} title="Lorem ipsum Donor on Ipmsum" /> 
+      <ServiceInfo
+        title="Lorem ipsum Donor on Ipmsum"
+        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lacus dui, fringilla auctor placerat venenatis, pharetra nec tortor. Nulla tincidunt risus at leo sagittis pharetra. Vestibulum malesuada nibh est, a finibus diam efficitur vitae. Fusce gravida risus et imperdiet eleifend. Ut felis nisi, auctor ac ullamcorper a, cursus et turpis. Etiam vulputate hendrerit leo ac feugiat. Duis suscipit felis a leo ultricies, suscipit pharetra purus egestas.
 
       "
 
-      subtitle="Aqueam memento rebus in arduis servare memtem"
-       />
+        subtitle="Aqueam memento rebus in arduis servare memtem"
+      />
 
       <main className="flex min-h-screen flex-col items-center justify-between lg:px-24 px-10">
 

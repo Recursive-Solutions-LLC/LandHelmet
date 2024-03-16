@@ -4,11 +4,14 @@ import ServiceInfoContent from './ServiceInfoContent'
 
 const ServiceInfo: FC<ServiceInfoProps> = (props) => {
     const { title, subtitle, text, image, callToAction } = props
-    const sectionClass = image ? "" : "w-100 bg-s3 py-32"
+    const sectionClass = image ? `bg-[url('/images/services/banners/quality/desktop/quality.png')]` : "w-100 bg-s3 py-32"
     return (
         <section className={sectionClass}>
 
             <div className="mx-auto container">
+                <div className="">
+
+                </div>
                 <div className="w-4/6 row">
                     <ServiceInfoContent title={title} subtitle={subtitle} text={text} callToAction={callToAction} />
                 </div>
