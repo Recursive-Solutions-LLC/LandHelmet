@@ -47,22 +47,17 @@ const ShowCase: React.FC<ShowCaseProps> = ({
         animate="enter"
         transition={{ type: "linear", duration: 2 }}
       >
-        <div className="z-10  w-full items-center justify-between font-mono text-sm lg:flex">
+        <div className="z-10  w-[80svw] items-center justify-between font-mono lg:flex text-sm ">
           <div className="flex">
 
             <Image src={image} alt="helmet" width={1500} height={1500} />
-            <span className="flex flex-row bottom-0  transform absolute   border-2 border-gray-500  bg-white  rounded-full">
-
-              <h1 className="p-2 font-custom  tracking-tight text-black">DUALQ</h1>
-              <Image className="p-2" height={30} width={30} src="/images/icon_info.svg" alt="icon" />
-
-            </span>
+       
 
           </div>
 
           <div className=" place-self-center mt-5 lg:col-span-7">
             <div className="grid grid-cols-6 lg:mx-24  ">{IconHtml}</div>
-            <h1 className="font-custom max-w-4xl lg:mx-24  font-custom  mb-4 mt-8  text-3xl  tracking-tight leading-none md:text-5xl xl:text-6xl text-black">
+            <h1 className="max-w-4xl lg:mx-24  font-custom  mb-4 mt-8  text-3xl  tracking-tight leading-none md:text-5xl xl:text-6xl text-black">
               {title}
             </h1>
             <p className="max-w-5xl lg:mx-24 mb-6 font-light text-black  lg:mb-8 md:text-lg lg:text-xl dark:text-black">
