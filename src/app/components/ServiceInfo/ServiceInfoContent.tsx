@@ -15,6 +15,7 @@ const ServiceInfo: FC<ServiceInfoContainerProps> = ({ title, subtitle, text }) =
         (
             <motion.p
                 variants={variants}
+                viewport={{ once: true }}
                 transition={{ type: "linear", duration: 2 }}
                 className="col my-10 text-2xl leading-5 text-s2 font-body">
                 {text}
@@ -25,6 +26,7 @@ const ServiceInfo: FC<ServiceInfoContainerProps> = ({ title, subtitle, text }) =
         (subtitle) &&
         (
             <motion.h6
+            viewport={{ once: true }}
                 variants={variants}
                 transition={{ type: "linear", duration: 1.5 }}
                 className="col mt-14 font-bold text-lg leading-5 text-p1 font-title"
@@ -38,8 +40,10 @@ const ServiceInfo: FC<ServiceInfoContainerProps> = ({ title, subtitle, text }) =
 
         <motion.div
             initial="hidden"
-            animate="enter"
+            whileInView="enter"
+            variants={variants}
             className="w-4/6 flex flex-col justify-between"
+            viewport={{ once: true }}
             >
             <div className="col">
                 <motion.h2 variants={variants}
