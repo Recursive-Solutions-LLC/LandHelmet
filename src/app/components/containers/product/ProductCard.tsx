@@ -3,6 +3,7 @@ import "./Product.scss";
 import React, { useRef } from "react";
 import Image from "next/image";
 import { animate, motion,useInView } from "framer-motion";
+
 const ProductCard = (data:any) => {
     const variants ={
         initial:{
@@ -36,7 +37,7 @@ const ProductCard = (data:any) => {
       </motion.div>
       <motion.div className="title-container "variants={variants}>
         <div className="title">
-          <img   src={data.img} alt="people" />
+          <Image   src={data.img} alt="people" />
           <h1>
             <b className="hover:text-[#B0A47F]">Unique</b> Ideas
           </h1>
@@ -55,7 +56,7 @@ const ProductCard = (data:any) => {
            <h2 className="text-lg font-semibold" >Branding</h2>
            <p>
              Lorem Ipsum is simply dummy text of the printing and typesetting
-             industry. Lorem Ipsum has been the industry's standard dummy text
+             industry. Lorem Ipsum has been the industry standard dummy text
              ever since the 1500s,
            </p>
            <button className="text-white hover:animate-pulse"  >What we do?</button>
