@@ -3,7 +3,7 @@ import Link from "next/link"
 import { Popover, Transition } from "@headlessui/react"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid";
 import { FC, Fragment } from "react";
-import HeaderNavItem from "../model/HeaderNavItem";
+import HeaderNavItem from "../Header/HeaderNavItem";
 import { NavItems, SubNavItems } from "../model/NavItem";
 import Image from "next/image";
 

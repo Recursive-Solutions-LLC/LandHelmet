@@ -1,13 +1,10 @@
 "use client"
 import React from "react";
 import Image from "next/image";
+import { CoverProps } from "@/app/interfaces";
 
-interface ShowCaseProps {
-    title: string;
-    image: string;
-}
 
-const Cover: React.FC<ShowCaseProps> = ({
+const Cover: React.FC<CoverProps> = ({
     title,
     image
 }) => {

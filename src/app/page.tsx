@@ -5,13 +5,11 @@ import Footer from "../app/components/layout/Footer";
 import Header from "../app/components/layout/Header";
 import Details from "../app/components/containers/Details";
 import Quote from "../app/components/containers/Quote";
-import { Product, DetailProps } from "../app/components/model/Product";
-import { NavItems, SubNavItems } from "./components/model/NavItem";
-import ItemProduct from "./components/containers/ItemProduct";
 import Banner from "./components/containers/Banner";
 import ServiceInfo from "./components/containers/ServiceInfo";
 import { motion, useScroll } from "framer-motion";
 import ProductCard from "./components/ProductCard/ProductCard";
+import { NavItems, Product, SubNavItems } from "./interfaces";
 
 export default function Home() {
   const variants = {
