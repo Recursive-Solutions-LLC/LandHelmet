@@ -41,7 +41,8 @@ interface svg {
 
 export interface CoverProps {
     title: string;
-    image: string;
+    srcDesktop: string;
+    srcMobile: string;
 }
 
 export interface Product {
