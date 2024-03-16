@@ -10,7 +10,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../../app/globals.css";
 import { NavItems, SubNavItems } from "@/app/components/model/NavItem";
-import Cover from "@/app/components/containers/AboutCover";
+import Cover from "@/app/components/containers/Cover";
 
 const AboutUs = () => {
   const navItems: NavItems[] = [

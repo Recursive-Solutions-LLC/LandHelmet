@@ -26,7 +26,7 @@ const Banner: React.FC<ShowCaseProps> = ({
                 <div className="flex-1 flex items-center h-24 justify-center">
                     <div id="2" className=" flex gap-8 justify-center items-center lg:px-24 pd:mx-12 sm:px-12 xs:px-12 ">
                         {svgs.map((svg, index) => (
-                            <div>
+                            <div key={index}>
                                 <div className="border border-gray-100 p-3 rounded-t-2xl rounded-b-2xl">
                                     <Image height={40} width={40} src={svg.svg} alt="icon" className="text-white" />
                                 </div>

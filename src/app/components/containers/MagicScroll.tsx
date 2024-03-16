@@ -1,78 +1,84 @@
-"use client"
+// ProjectMain component
+import React, { useRef, useEffect } from "react";
+import Image from "next/image";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import hrone from "../../../../public/images/logo.png";
 
-import React, { useRef }  from "react";
-import {
-  motion,
-  useScroll,
-  useSpring,
-  useTransform,
-  useMotionValue,
-  useVelocity,
-  useAnimationFrame
-} from "framer-motion";
-import { wrap } from "@motionone/utils";
+gsap.registerPlugin(ScrollTrigger);
 
-interface ParallaxProps {
-    children: React.ReactNode;
-  baseVelocity: number;
+interface History {
+  histories: SimpleHistory[]
 }
 
-export default function  ParallaxText({ children, baseVelocity = 100 }: ParallaxProps){
-  const baseX = useMotionValue(0);
-  const { scrollY } = useScroll();
-  const scrollVelocity = useVelocity(scrollY);
-  const smoothVelocity = useSpring(scrollVelocity, {
-    damping: 50,
-    stiffness: 400
-  });
-  const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
-    clamp: false
-  });
+interface SimpleHistory {
+  title: string;
+  img: string;
+  description: string;
+}
 
-  /**
-   * This is a magic wrapping for the length of the text - you
-   * have to replace for wrapping that works for you or dynamically
-   * calculate
-   */
-  const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
+const ProjectMain: React.FC<History> = ({
+  histories
+}) => {
+  const sectionRef = useRef(null);
+  const triggerRef = useRef(null);
 
-  const directionFactor = useRef<number>(1);
-  useAnimationFrame((t, delta) => {
-    let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
+  useEffect(() => {
+    const pin = gsap.fromTo(
+      sectionRef.current,
+      {
+        translateX: 0,
+      },
+      {
+        translateX: `-${900 * histories.length}px`, // Adjust the distance based on the number of elements
+        ease: "none",
+        duration: 3,
+        scrollTrigger: {
+          trigger: triggerRef.current,
+          start: "top top",
+          end: `${600*histories.length}px`, // Adjust the end scroll position based on the number of elements
+          scrub: 0.6,
+          pin: true,
+        },
+      }
+    );
+    return () => {
+      pin.kill();
+    };
+  }, [histories.length]);
 
-    /**
-     * This is what changes the direction of the scroll once we
-     * switch scrolling directions.
-     */
-    if (velocityFactor.get() < 0) {
-      directionFactor.current = -1;
-    } else if (velocityFactor.get() > 0) {
-      directionFactor.current = 1;
-    }
-
-    moveBy += directionFactor.current * moveBy * velocityFactor.get();
-
-    baseX.set(baseX.get() + moveBy);
-  });
-
-  /**
-   * The number of times to repeat the child text should be dynamically calculated
-   * based on the size of the text and viewport. Likewise, the x motion value is
-   * currently wrapped between -20 and -45% - this 25% is derived from the fact
-   * we have four children (100% / 4). This would also want deriving from the
-   * dynamically generated number of children.
-   */
   return (
-    <div className="parallax  w-screen">
-      <motion.div className="scroller" style={{ x }}>
-     {children}
-     {children}
-     {children}
-     {children}
-      </motion.div>
-    </div>
+    <section style={{ backgroundImage: 'url("/images/history-background.png")', backgroundSize: 'cover' }} >
+      <div ref={triggerRef} className="w-screen font-custom scroll-section-outer">
+        <h2 className="pl-10 pt-10 text-white text-6xl">Our Roots History</h2>
+        <div className="h-screen w-screen flex overflow-x-auto">
+          <div ref={sectionRef} className="scroll-section-inner flex">
+            {histories.map((history, index) => (
+              <div key={index} className={`m-9 ml-48 flex-shrink-0 ${index % 2 === 0 ? 'mt-12' : 'mt-40'}`}>
+                <div className={`project-sl__single  flex`}>
+                  <div className="flex" >
+                    <div className="flex items-center">
+                      <Image src={history.img} alt="Image" width={300} height={450} className="rounded-lg rounded-t-3xl rounded-b-3xl" />
+                    </div>
+                    <div className="content m-2" style={{ width: "25rem" }}>
+                      <h2 className="opacity-100">
+                        <p className="text-white text-7xl">
+                          {history.title}
+                        </p>
+                        <p className="text-white text-2xl">
+                          {history.description}
+                        </p>
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 
-
-
+export default ProjectMain;

@@ -15,7 +15,7 @@ const Cover: React.FC<ShowCaseProps> = ({
         <>
             <div className="z-1 font-custom  m-9 flex justify-center items-center h-96">
                 <h1 className="absolute text-white text-5xl font-bold">{title}</h1>
-                <img src={image} alt="about-us-cover" width={1500} height={600} className="border-1 rounded-rounded-lg rounded-t-3xl rounded-b-3xl object-cover w-full h-full" />
+                <img src={image} alt="about-us-cover" width={1500} height={600} className="border-1 rounded-lg rounded-t-3xl rounded-b-3xl object-cover w-full h-full" />
             </div>
             <div className="my-8 lg:mx-24 md:mx-12 sm:mx-12 xs:mx-12 lg:flex md:flex justify-between lg:gap-72 md:gap-16 sm:gap-12 font-custom ">
                 <h2 className="ml-4 font-semibold lg:min-w-[16rem] md:min-w-[14rem] text-black lg:text-4xl text-3xl">
