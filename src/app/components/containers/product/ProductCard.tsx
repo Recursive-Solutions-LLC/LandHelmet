@@ -36,7 +36,7 @@ const ProductCard = (data:any) => {
       </motion.div>
       <motion.div className="title-container "variants={variants}>
         <div className="title">
-          <img   src="/images/service.jpg" alt="people" />
+          <img   src={data.img} alt="people" />
           <h1>
             <b className="hover:text-[#B0A47F]">Unique</b> Ideas
           </h1>
