@@ -24,7 +24,7 @@ const AboutUs = () => {
   return (
     <>
       <Header navItems={navItems} subNavItems={subNavItems} />
-        < Cover title={"About Us"} image={"/images/about-us.png"}/>
+        < Cover title={"About Us"}     srcMobile={"/images/about-us/mobile/cover.png"} srcDesktop={"/images/about-us/desktop/cover.png "}/>
       <Footer />
     </>
   );
