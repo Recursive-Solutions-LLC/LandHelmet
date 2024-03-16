@@ -13,12 +13,16 @@ import ItemProduct from "./components/containers/ItemProduct";
 import Parallax from "./components/containers/parallax/Parallax";
 import ServiceInfo from "./components/containers/ServiceInfo";
 import { motion, useScroll } from "framer-motion";
+import CardsContainer from "./components/containers/CardsContainer";
+
 export default function Home() {
   const variants = {
     hidden: { opacity: 0, x: -200, y: 0 },
     enter: { opacity: 1, x: 0, y: 0},
   }
+
   const { scrollYProgress } = useScroll();
+
   const products: Product[] = [{
     title: "What is Lorem Ipsum?",
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
@@ -35,21 +39,67 @@ export default function Home() {
   }
 ]
 
-const navItems: NavItems []= [
-  { title: "Home", link: "/" },
-  { title: "About Us", link: "/about-us" },
-];
+  const navItems: NavItems []= [
+    { title: "Home", link: "/" },
+    { title: "About Us", link: "/about-us" },
+  ];
 
-const subNavItems:SubNavItems[][]= [
-  [
-      { title: "Sub Item 1", link: "/sub-item-1" },
-      { title: "Sub Item 2", link: "/sub-item-2" },
-  ],
-  [
-      { title: "Sub Item 3", link: "/sub-item-3" },
-      { title: "Sub Item 4", link: "/sub-item-4" },
-  ]
-];
+  const subNavItems:SubNavItems[][]= [
+    [
+        { title: "Sub Item 1", link: "/sub-item-1" },
+        { title: "Sub Item 2", link: "/sub-item-2" },
+    ],
+    [
+        { title: "Sub Item 3", link: "/sub-item-3" },
+        { title: "Sub Item 4", link: "/sub-item-4" },
+    ]
+  ];
+
+  const cards = [
+    { 
+      title: 'John Doe', 
+      description: 'Frontend Developer', 
+      image: '/images/posters-unknown-person-silhouette-whith-red-tie.jpg.jpg',
+      profileUrl: '#'
+    },
+    { 
+      title: 'John Doe', 
+      description: 'Frontend Developer', 
+      image: '/images/posters-unknown-person-silhouette-whith-red-tie.jpg.jpg',
+      profileUrl: '#'
+    },
+    { 
+      title: 'John Doe', 
+      description: 'Frontend Developer', 
+      image: '/images/posters-unknown-person-silhouette-whith-red-tie.jpg.jpg',
+      profileUrl: '#'
+    },
+    { 
+      title: 'John Doe', 
+      description: 'Frontend Developer', 
+      image: '/images/posters-unknown-person-silhouette-whith-red-tie.jpg.jpg',
+      profileUrl: '#'
+    },
+    { 
+      title: 'John Doe', 
+      description: 'Frontend Developer', 
+      image: '/images/posters-unknown-person-silhouette-whith-red-tie.jpg.jpg',
+      profileUrl: '#'
+    },
+    { 
+      title: 'John Doe', 
+      description: 'Frontend Developer', 
+      image: '/images/posters-unknown-person-silhouette-whith-red-tie.jpg.jpg',
+      profileUrl: '#'
+    },
+    { 
+      title: 'John Doe', 
+      description: 'Frontend Developer', 
+      image: '/images/posters-unknown-person-silhouette-whith-red-tie.jpg.jpg',
+      profileUrl: '#'
+    },
+  ];
+
   return (
     <>
       <Header  navItems={navItems} subNavItems={subNavItems}/>
@@ -70,7 +120,7 @@ const subNavItems:SubNavItems[][]= [
   
         <section>
 
-     
+     <CardsContainer cards={cards} />
     </section>
 
     
