@@ -1,12 +1,14 @@
 import { ReactNode } from 'react';
 
-export interface ServiceInfoProps {
+export interface ServiceInfoProps extends ServiceInfoContainerProps {
+    image?: ImageType}
+export interface ServiceInfoContainerProps {
     title: string;
     subtitle?: string;
     text?: string;
-    image?: ImageType
     callToAction?:  ReactNode
 }
+
 
 
 
