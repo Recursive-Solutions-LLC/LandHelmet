@@ -60,6 +60,21 @@ export default function Home() {
       <Header navItems={navItems} subNavItems={subNavItems} />
 
       <ServiceInfo title="Lorem ipsum Donor on Ipmsum" />
+      <ServiceInfo 
+      title="Lorem ipsum Donor on Ipmsum" 
+      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lacus dui, fringilla auctor placerat venenatis, pharetra nec tortor. Nulla tincidunt risus at leo sagittis pharetra. Vestibulum malesuada nibh est, a finibus diam efficitur vitae. Fusce gravida risus et imperdiet eleifend. Ut felis nisi, auctor ac ullamcorper a, cursus et turpis. Etiam vulputate hendrerit leo ac feugiat. Duis suscipit felis a leo ultricies, suscipit pharetra purus egestas.
+
+      "
+       />
+             <ServiceInfo 
+      title="Lorem ipsum Donor on Ipmsum" 
+      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lacus dui, fringilla auctor placerat venenatis, pharetra nec tortor. Nulla tincidunt risus at leo sagittis pharetra. Vestibulum malesuada nibh est, a finibus diam efficitur vitae. Fusce gravida risus et imperdiet eleifend. Ut felis nisi, auctor ac ullamcorper a, cursus et turpis. Etiam vulputate hendrerit leo ac feugiat. Duis suscipit felis a leo ultricies, suscipit pharetra purus egestas.
+
+      "
+
+      subtitle="Aqueam memento rebus in arduis servare memtem"
+       />
+
       <main className="flex min-h-screen flex-col items-center justify-between lg:px-24 px-10">
 
         <ShowCase title="NOT JUST AN ORDINARY SHELL" description="InMould technology makes the helmet lighter and very firm. This technology is currently the best one for making ultralight helmets and providing you maximum protection. How does InMould work? Expandable polystyrene is injected into our polycarbonate shells under pressure, heat and steam. The inner and outer shell are just one piece, they will not separate, so you can enjoy your ride to the fullest." image="/images/helmet-feature1@2x.png" icon={['/images/icon_pc.svg', "/images/icon_inmold.svg"]} variants={variants}></ShowCase>

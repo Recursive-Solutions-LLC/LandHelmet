@@ -1,19 +1,58 @@
 import { ServiceInfoContainerProps } from '@/app/interfaces'
+import { motion } from 'framer-motion'
 import React, { FC } from 'react'
 
 const ServiceInfo: FC<ServiceInfoContainerProps> = ({ title, subtitle, text }) => {
 
-    const onlyTitle = (title && !subtitle && !text)  && "pt-25vh"
+    const onlyTitle = (title && !subtitle && !text) && "pt-25vh"
     const titleClass = `font-title font-semibold	text-5xl text-s1 ${onlyTitle}`
+    const variants = {
+        hidden: { opacity: 0, x: 0, y: 200 },
+        enter: { opacity: 1, x: 0, y: 0 },
+    }
+    const renderText =
+        (text) &&
+        (
+            <motion.p
+                variants={variants}
+                transition={{ type: "linear", duration: 2 }}
+                className="col my-10 text-2xl leading-5 text-s2 font-body">
+                {text}
+            </motion.p>
+        )
+
+    const renderSubtitle =
+        (subtitle) &&
+        (
+            <motion.h6
+                variants={variants}
+                transition={{ type: "linear", duration: 1.5 }}
+                className="col mt-14 font-bold text-lg leading-5 text-p1 font-title"
+            >
+                {subtitle}
+            </motion.h6>
+        )
+
+
     return (
 
-        <div className="w-4/6 row">
+        <motion.div
+            initial="hidden"
+            animate="enter"
+            className="w-4/6 flex flex-col justify-between"
+            >
             <div className="col">
-                <h2 className={titleClass}>
+                <motion.h2 variants={variants}
+
+                    transition={{ type: "linear", duration: 1 }}
+                    className={titleClass}>
                     {title}
-                </h2>
+                </motion.h2>
+                {renderSubtitle}
+
+                {renderText}
             </div>
-        </div>
+        </motion.div>
 
     )
 }
