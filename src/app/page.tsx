@@ -40,12 +40,12 @@ export default function Home() {
 
   const subNavItems: SubNavItems[][] = [
     [
-      { title: "Sub Item 1", link: "/sub-item-1" },
-      { title: "Sub Item 2", link: "/sub-item-2" },
+      { title: "Lore Ipsum", link: "/sub-item-1" },
+      { title: "Lore Ipsum", link: "/sub-item-2" },
     ],
     [
-      { title: "Sub Item 3", link: "/sub-item-3" },
-      { title: "Sub Item 4", link: "/sub-item-4" },
+      { title: "Lore Ipsum", link: "/sub-item-3" },
+      { title: "Lore Ipsum", link: "/sub-item-4" },
     ]
   ];
 
