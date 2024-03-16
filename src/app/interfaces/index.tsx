@@ -35,3 +35,12 @@ export interface SubNavItems {
     title: string;
     link: string;
 }
+
+export interface ShowCaseProps {
+    title: string;
+    description: string;
+    image: string;
+    icon: string[];
+    variants: any;
+  }
+  

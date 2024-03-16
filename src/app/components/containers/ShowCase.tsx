@@ -2,14 +2,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { ShowCaseProps } from "@/app/interfaces";
 
-interface ShowCaseProps {
-  title: string;
-  description: string;
-  image: string;
-  icon: string[];
-  variants: any;
-}
 
 
 const ShowCase: React.FC<ShowCaseProps> = ({
