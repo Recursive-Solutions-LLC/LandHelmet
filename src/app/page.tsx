@@ -11,7 +11,7 @@ import ItemProduct from "./components/containers/ItemProduct";
 import Banner from "./components/containers/Banner";
 import ServiceInfo from "./components/containers/ServiceInfo";
 import { motion, useScroll } from "framer-motion";
-import ProductCard from "./components/containers/product/ProductCard";
+import ProductCard from "./components/ProductCard/ProductCard";
 
 export default function Home() {
   const variants = {

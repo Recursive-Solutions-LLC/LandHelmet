@@ -1,5 +1,5 @@
 "use client"
-import "./Product.scss";
+// import "./Product.scss";
 import React, { useRef } from "react";
 import Image from "next/image";
 import { animate, motion,useInView } from "framer-motion";
