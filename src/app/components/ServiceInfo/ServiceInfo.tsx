@@ -4,16 +4,24 @@ import ServiceInfoContent from './ServiceInfoContent'
 
 const ServiceInfo: FC<ServiceInfoProps> = (props) => {
     const { title, subtitle, text, image, callToAction } = props
-    const sectionClass = image ? `bg-[url('/images/services/banners/quality/desktop/quality.png')]` : "w-100 bg-s3 py-32"
-    return (
-        <section className={sectionClass}>
+    const renderSectionBg = image ? ` bg-cover
+    md:bg-[url('/images/services/banners/quality/desktop/quality.png')]
+    bg-[url('/images/services/banners/quality/mobile/quality.png')]
 
-            <div className="mx-auto container">
+    ` : " bg-s3"
+
+    const sectionStyling = `w-svw py-32 ${renderSectionBg}`
+
+    const hasImage = image ? true : false
+    return (
+        <section className={sectionStyling}>
+
+            <div className="mx-auto container container-padding">
                 <div className="">
 
                 </div>
-                <div className="w-4/6 row">
-                    <ServiceInfoContent title={title} subtitle={subtitle} text={text} callToAction={callToAction} />
+                <div className="w-100 md:w-4/6 row">
+                    <ServiceInfoContent hasImage={hasImage} title={title} subtitle={subtitle} text={text} callToAction={callToAction} />
                 </div>
             </div>
         </section>

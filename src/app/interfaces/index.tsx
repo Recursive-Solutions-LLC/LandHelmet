@@ -1,9 +1,14 @@
 import { ReactNode } from 'react';
 
-export interface ServiceInfoProps extends ServiceInfoContainerProps {
+export interface ServiceInfoProps extends ServiceInfoContentProps {
     image?: ImageType
 }
-export interface ServiceInfoContainerProps {
+export interface ServiceInfoContainerProps extends ServiceInfoContentProps {
+
+    hasImage: boolean
+}
+
+export interface ServiceInfoContentProps {
     title: string;
     subtitle?: string;
     text?: string;

@@ -2,10 +2,11 @@ import { ServiceInfoContainerProps } from '@/app/interfaces'
 import { motion } from 'framer-motion'
 import React, { FC } from 'react'
 
-const ServiceInfo: FC<ServiceInfoContainerProps> = ({ title, subtitle, text }) => {
+const ServiceInfo: FC<ServiceInfoContainerProps> = ({ title, subtitle, text, hasImage }) => {
 
     const onlyTitle = (title && !subtitle && !text) && "pt-25vh"
-    const titleClass = `font-title font-semibold	text-5xl text-s1 ${onlyTitle}`
+    const titleColor = hasImage ? "text-p2" : "text-s1"
+    const titleClass = `font-title font-semibold	text-5xl lg:text-6xl xl:text-8xl ${titleColor}   ${onlyTitle}`
     const variants = {
         hidden: { opacity: 0, x: 0, y: 200 },
         enter: { opacity: 1, x: 0, y: 0 },
@@ -17,7 +18,7 @@ const ServiceInfo: FC<ServiceInfoContainerProps> = ({ title, subtitle, text }) =
                 variants={variants}
                 viewport={{ once: true }}
                 transition={{ type: "linear", duration: 2 }}
-                className="col my-10 text-2xl leading-5 text-s2 font-body">
+                className="col my-10 text-2xl leading-5 text-s2 font-light font-body">
                 {text}
             </motion.p>
         )
@@ -26,7 +27,7 @@ const ServiceInfo: FC<ServiceInfoContainerProps> = ({ title, subtitle, text }) =
         (subtitle) &&
         (
             <motion.h6
-            viewport={{ once: true }}
+                viewport={{ once: true }}
                 variants={variants}
                 transition={{ type: "linear", duration: 1.5 }}
                 className="col mt-14 font-bold text-lg leading-5 text-p1 font-title"
@@ -42,9 +43,9 @@ const ServiceInfo: FC<ServiceInfoContainerProps> = ({ title, subtitle, text }) =
             initial="hidden"
             whileInView="enter"
             variants={variants}
-            className="w-4/6 flex flex-col justify-between"
+            className=" flex flex-col justify-between"
             viewport={{ once: true }}
-            >
+        >
             <div className="col">
                 <motion.h2 variants={variants}
 
