@@ -14,6 +14,7 @@ import Parallax from "./components/containers/parallax/Parallax";
 import ServiceInfo from "./components/containers/ServiceInfo";
 import { motion, useScroll } from "framer-motion";
 import CardsContainer from "./components/containers/CardsContainer";
+import ServiceInfo2 from "./components/containers/ServiceInfo2";
 
 export default function Home() {
   const variants = {
@@ -100,6 +101,15 @@ export default function Home() {
     },
   ];
 
+  //this 2 components are only for testing the service info 2 component
+  const mockServiceInfoImg = <img src="/images/progressive-big2-1080x-q72-1080x-q72-540x-q72.webp" className="" alt="mock image" width={600} height={900}/>;
+  const mockServiceInfoText = (
+  <div>
+    <h1 className="text-black mb-2">LOREM IPSUM</h1>
+    <p className=" mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu lobortis elementum nibh tellus molestie nunc non blandit massa. Nisl condimentum id venenatis a condimentum vitae sapien.</p>
+    <p className="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu lobortis elementum nibh tellus molestie nunc non blandit massa. Nisl condimentum id venenatis a condimentum vitae sapien.</p>
+  </div>);
+
   return (
     <>
       <Header  navItems={navItems} subNavItems={subNavItems}/>
@@ -121,6 +131,7 @@ export default function Home() {
         <section>
 
      <CardsContainer cards={cards} />
+     <ServiceInfo2 imageComponent={mockServiceInfoImg} textComponent={mockServiceInfoText} />
     </section>
 
     
