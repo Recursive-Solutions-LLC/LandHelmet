@@ -2,6 +2,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
+import { NavItems, SubNavItems } from "./interfaces";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,11 +24,31 @@ export default function RootLayout({
 
 }>) {
 
+
+  const navItems: NavItems[] = [
+    { title: "Home", link: "/" },
+    { title: "About Us", link: "/about-us" },
+  ];
+
+  const subNavItems: SubNavItems[][] = [
+    [
+      { title: "Lore Ipsum", link: "/sub-item-1" },
+      { title: "Lore Ipsum", link: "/sub-item-2" },
+    ],
+    [
+      { title: "Lore Ipsum", link: "/sub-item-3" },
+      { title: "Lore Ipsum", link: "/sub-item-4" },
+    ]
+  ];
+
   return (
     <html lang="en">
-              <link rel="icon" href="./favicon.ico" sizes="any" />
+      <link rel="icon" href="./favicon.ico" sizes="any" />
 
+      <Header navItems={navItems} subNavItems={subNavItems} />
       <body className={inter.className}>{children}</body>
+
+      <Footer />
     </html>
   );
 }

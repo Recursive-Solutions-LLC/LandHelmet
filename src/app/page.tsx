@@ -30,21 +30,6 @@ export default function Home() {
   }
   ]
 
-  const navItems: NavItems[] = [
-    { title: "Home", link: "/" },
-    { title: "About Us", link: "/about-us" },
-  ];
-
-  const subNavItems: SubNavItems[][] = [
-    [
-      { title: "Lore Ipsum", link: "/sub-item-1" },
-      { title: "Lore Ipsum", link: "/sub-item-2" },
-    ],
-    [
-      { title: "Lore Ipsum", link: "/sub-item-3" },
-      { title: "Lore Ipsum", link: "/sub-item-4" },
-    ]
-  ];
 
 
   // TODO: refactor this so it can have a proper structure
@@ -54,9 +39,7 @@ export default function Home() {
       className="progress-bar rounded-lg"
       style={{ scaleX: scrollYProgress }}
     />
-      <Header navItems={navItems} subNavItems={subNavItems} />
-
-
+ 
       <ServiceInfo
         title="Lorem ipsum Donor on Ipmsum"
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lacus dui, fringilla auctor placerat venenatis, pharetra nec tortor. Nulla tincidunt risus at leo sagittis pharetra. Vestibulum malesuada nibh est, a finibus diam efficitur vitae. Fusce gravida risus et imperdiet eleifend. Ut felis nisi, auctor ac ullamcorper a, cursus et turpis. Etiam vulputate hendrerit leo ac feugiat. Duis suscipit felis a leo ultricies, suscipit pharetra purus egestas.
@@ -83,7 +66,7 @@ export default function Home() {
         <Quote />
       </main>
       <Banner title={"Heating in winter, <br/> cooling in summer"} svgs={[{ title: "Lore Ip", svg: '/images/icon_pc_white.svg' }, { title: "Lore Ip", svg: '/images/icon_pc_white.svg' }, { title: "Lore Ip", svg: '/images/icon_pc_white.svg' }]} />
-      <Footer />
+ 
     </>
   );
 }
