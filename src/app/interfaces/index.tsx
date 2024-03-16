@@ -1,3 +1,26 @@
+import { ReactNode } from 'react';
+
+export interface ServiceInfoProps {
+    title: string;
+    subtitle?: string;
+    text?: string;
+    image?: ImageType
+    callToAction?:  ReactNode
+}
+
+
+
+export type ImageType =  {
+    src: string;
+    alt: string;
+    width: ImageDimension
+    height: ImageDimension
+}
+
+type ImageDimension = number | undefined;
+
+
+// Technical debt
 export interface BannerProps {
     title: string;
     svgs: svg[];
