@@ -41,9 +41,10 @@ const ServiceInfo: FC<ServiceInfoContainerProps> = ({ title, subtitle, text }) =
         <motion.div
             initial="hidden"
             whileInView="enter"
+            viewport={{ once: true }} 
             variants={variants}
             className="w-4/6 flex flex-col justify-between"
-            viewport={{ once: true }}
+    
             >
             <div className="col">
                 <motion.h2 variants={variants}

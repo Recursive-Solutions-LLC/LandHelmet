@@ -65,7 +65,7 @@ export interface ShowCaseProps {
     description: string;
     image: string;
     icon: string[];
-    variants: any;
+    right: boolean;
 }
 
 
