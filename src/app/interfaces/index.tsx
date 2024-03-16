@@ -42,5 +42,10 @@ export interface ShowCaseProps {
     image: string;
     icon: string[];
     variants: any;
-  }
-  
+}
+
+
+export interface HeaderProps {
+    navItems: NavItems[];
+    subNavItems: SubNavItems[][];
+}
