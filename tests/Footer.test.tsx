@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Footer from '@/app/components/layout/Footer';
+import Footer from '@/app/components/Layout/Footer';
 
 // another parameterless component
 describe('testing the footer component', () => {

@@ -1,14 +1,12 @@
 
 "use client"
 import ShowCase from "../app/components/containers/ShowCase";
-import Footer from "../app/components/layout/Footer";
-import Header from "../app/components/layout/Header";
 import Details from "../app/components/containers/Details";
 import Quote from "../app/components/containers/Quote";
 import Banner from "./components/containers/Banner";
 import ServiceInfo from "./components/ServiceInfo/ServiceInfo";
 import { motion, useScroll } from "framer-motion";
-import { NavItems, Product, SubNavItems } from "./interfaces";
+import {  Product } from "./interfaces";
 
 export default function Home() {
 
@@ -29,10 +27,6 @@ export default function Home() {
     color: "bg-red-500",
   }
   ]
-
-
-
-  // TODO: refactor this so it can have a proper structure
 
   return (
     <>  <motion.div
