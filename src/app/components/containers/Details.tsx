@@ -85,7 +85,7 @@ return  <button key={index}   onClick={ ()=>{
         <div className="md:py-8">
     
           <div className="mb-2 md:mb-3">
-          <h1 className="   font-title mt-8  text-xl  tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-black">
+          <h1 className="   font-custom mt-8  text-xl  tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-black">
           {selectedProduct.title}
             </h1>
             <p className=" font-light text-gray-500  lg:mb-8 md:text-lg lg:text-xl dark:text-black">

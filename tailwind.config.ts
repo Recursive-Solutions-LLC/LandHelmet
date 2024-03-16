@@ -8,11 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      padding: {
+        "25vh": "25vh"
+      },
       colors: {
         "p1": "#80BB2A",
         "p2": "#FFFFFF",
         "s1": "#22577A",
-        "s2": "#000000"  
+        "s2": "#000000",
+        "s3": "#EDEAE0"
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
