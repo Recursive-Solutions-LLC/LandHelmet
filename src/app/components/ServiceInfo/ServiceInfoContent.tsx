@@ -8,7 +8,9 @@ const ServiceInfo: FC<ServiceInfoContainerProps> = ({ title, subtitle, text }) =
 
         <div className="w-4/6 row">
             <div className="col">
-                <h2 className="font-title font-semibold	text-5xl ">{title}</h2>
+                <h2 className="font-title font-semibold	text-5xl text-p1">
+                    {title}
+                </h2>
             </div>
         </div>
 
