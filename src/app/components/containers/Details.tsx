@@ -1,8 +1,8 @@
 "use client"
 
+import { DetailProps, Product } from "@/app/interfaces";
 import { motion } from "framer-motion";
 import React, { useState } from "react"
-import { DetailProps, Product} from "../model/Product"
 
   const Details: React.FC<DetailProps> = (imageDetail:DetailProps) => {
     const [isClicked, setIsClicked] = useState(false);

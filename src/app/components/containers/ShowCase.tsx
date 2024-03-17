@@ -2,73 +2,101 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-
-interface ShowCaseProps {
-  title: string;
-  description: string;
-  image: string;
-  icon: string[];
-  variants: any;
-}
-
+import { ShowCaseProps } from "@/app/interfaces";
 
 const ShowCase: React.FC<ShowCaseProps> = ({
   title,
   description,
   image,
   icon,
-  variants,
+  right,
 }) => {
-  
   const IconHtml = icon.map((ico) => {
-    // eslint-disable-next-line react/jsx-key
     return (
       <a
         key={Math.random()}
         href="#"
         className="p-2 cursor-pointer pointer-events-auto w-15 h-15 border-2 border-black border-opacity-60 float-left relative mr-3.5 rounded-lg box-border transition-all duration-300 flex justify-center items-center"
       >
-        <Image height={30} width={30} src={ico} alt="icon" className="text-black" />
+        <Image
+          height={30}
+          width={30}
+          src={ico}
+          alt="icon"
+          className="text-black"
+        />
       </a>
     );
   });
+  const variantText = {
+    hidden: { opacity: 0, x: 0, y: 200 },
+    enter: { opacity: 1, x: 0, y: 0 },
+  };
+  const variantLeft = {
+    hidden: { opacity: 0, x: 200, y: 0 },
+    enter: { opacity: 1, x: 0, y: 0 },
+  };
+  const variantRight = {
+    hidden: { opacity: 0, x: -200, y: 0 },
+    enter: { opacity: 1, x: 0, y: 0 },
+  };
+  const renderImage = (
+    <motion.div
+      variants={right ? variantRight : variantLeft}
+      initial="hidden"
+      whileInView="enter"
+      viewport={{ once: true }}
+      transition={{ type: "linear", duration: 2 }}
+      className="flex"
+    >
+      <Image src={image} alt="helmet" width={1500} height={1500} />
+    </motion.div>
+  );
+  const renderText = (
+    <div className=" place-self-center mt-5 lg:col-span-7">
+      <motion.div  initial="hidden"
+        variants={variantText}
+        transition={{ type: "linear", duration: 2 }}
+        whileInView="enter"
+        viewport={{ once: true }} className="grid grid-cols-6 lg:mx-24  ">{IconHtml}</motion.div>
+      <motion.h1
+        initial="hidden"
+        variants={variantText}
+        transition={{ type: "linear", duration: 2 }}
+        whileInView="enter"
+        viewport={{ once: true }}
+        className="max-w-4xl lg:mx-24  font-custom  mb-4 mt-8  text-3xl  tracking-tight leading-none md:text-5xl xl:text-6xl text-black"
+      >
+        {title}
+      </motion.h1>
+      <motion.p
+        initial="hidden"
+        variants={variantText}
+        transition={{ type: "linear", duration: 3 }}
+        whileInView="enter"
+        viewport={{ once: true }}
+        className="max-w-5xl lg:mx-24 mb-6 font-light text-black  lg:mb-8 md:text-lg lg:text-xl dark:text-black"
+      >
+        {description}
+      </motion.p>
+    </div>
+  );
 
   return (
-    <motion.div  initial={{opacity:0.5 , scale:0.5} }  transition={{duration:2}} whileInView={{opacity:1, scale:1}} className="flex  flex-row items-center justify-between ">
-      <motion.main drag  dragConstraints={{
-      top: -50,
-      left: -50,
-      right: 50,
-      bottom: 50,
-    }}
-        variants={variants}
-        initial="hidden"
-
-        animate="enter"
-        transition={{ type: "linear", duration: 2 }}
-      >
-        <div className="z-10  w-full items-center justify-between font-mono text-sm lg:flex">
-          <div className="flex">
-
-            <Image src={image} alt="helmet" width={1500} height={1500} />
-            <span className="flex flex-row bottom-0  transform absolute   border-2 border-gray-500  bg-white  rounded-full">
-
-              <h1 className="p-2 font-custom  tracking-tight text-black">DUALQ</h1>
-              <Image className="p-2" height={30} width={30} src="/images/icon_info.svg" alt="icon" />
-
-            </span>
-
-          </div>
-
-          <div className=" place-self-center mt-5 lg:col-span-7">
-            <div className="grid grid-cols-6 lg:mx-24  ">{IconHtml}</div>
-            <h1 className="font-custom max-w-4xl lg:mx-24  font-custom  mb-4 mt-8  text-3xl  tracking-tight leading-none md:text-5xl xl:text-6xl text-black">
-              {title}
-            </h1>
-            <p className="max-w-5xl lg:mx-24 mb-6 font-light text-black  lg:mb-8 md:text-lg lg:text-xl dark:text-black">
-              {description}
-            </p>
-          </div>
+    <motion.div className="flex  flex-row items-center justify-between ">
+      <motion.main>
+        <div className="z-10  w-[80svw] items-center justify-between font-mono lg:flex text-sm ">
+          {right ? (
+            <>
+              {renderImage}
+              {renderText}
+            </>
+          ) : (
+            <>
+              {renderText}
+              {renderImage}
+            </>
+          )}
         </div>
       </motion.main>
     </motion.div>
