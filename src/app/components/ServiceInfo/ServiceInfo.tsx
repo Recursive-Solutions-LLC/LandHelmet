@@ -10,7 +10,7 @@ const ServiceInfo: FC<ServiceInfoProps> = (props) => {
 
     ` : " bg-s3"
     const onlyTitle = (title && !subtitle && !text) ? true : false
-    const onlyTitleStyle = onlyTitle ? "pb-32" : "py-32"
+    const onlyTitleStyle = onlyTitle ? "pb-32 pt-25vh" : "py-32"
 
     const sectionStyling = `w-svw  ${onlyTitleStyle} ${renderSectionBg}`
 
@@ -23,7 +23,7 @@ const ServiceInfo: FC<ServiceInfoProps> = (props) => {
 
                 </div>
                 <div className="w-100 md:w-4/6 row">
-                    <ServiceInfoContent onlyTitle={onlyTitle} hasImage={hasImage} title={title} subtitle={subtitle} text={text} callToAction={callToAction} />
+                    <ServiceInfoContent hasImage={hasImage} title={title} subtitle={subtitle} text={text} callToAction={callToAction} />
                 </div>
             </div>
         </section>

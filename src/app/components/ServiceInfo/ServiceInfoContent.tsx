@@ -2,11 +2,10 @@ import { ServiceInfoContainerProps } from '@/app/interfaces'
 import { motion } from 'framer-motion'
 import React, { FC } from 'react'
 
-const ServiceInfo: FC<ServiceInfoContainerProps> = ({ title, subtitle, text, hasImage, onlyTitle }) => {
+const ServiceInfo: FC<ServiceInfoContainerProps> = ({ title, subtitle, text, hasImage }) => {
 
-    const onlyTitleStyle = (onlyTitle) && "pt-25vh"
     const titleColor = hasImage ? "text-p2" : "text-s1"
-    const titleClass = `font-title font-semibold	text-5xl lg:text-6xl xl:text-8xl ${titleColor}   ${onlyTitleStyle}`
+    const titleClass = `font-title font-semibold text-4xl md:text-5xl lg:text-6xl ${titleColor} `
     const variants = {
         hidden: { opacity: 0, x: 0, y: 200 },
         enter: { opacity: 1, x: 0, y: 0 },
@@ -42,7 +41,7 @@ const ServiceInfo: FC<ServiceInfoContainerProps> = ({ title, subtitle, text, has
         <motion.div
             initial="hidden"
             whileInView="enter"
-            viewport={{ once: true }} 
+            viewport={{ once: true }}
             variants={variants}
             className=" flex flex-col justify-between"
 
