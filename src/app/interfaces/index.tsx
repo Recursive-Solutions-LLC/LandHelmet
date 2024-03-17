@@ -4,7 +4,7 @@ export interface ServiceInfoProps extends ServiceInfoContentProps {
     image?: ImageType
 }
 export interface ServiceInfoContainerProps extends ServiceInfoContentProps {
-
+    onlyTitle: boolean
     hasImage: boolean
 }
 
