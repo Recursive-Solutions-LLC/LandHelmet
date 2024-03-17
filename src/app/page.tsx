@@ -7,7 +7,7 @@ import Banner from "./components/containers/Banner";
 import ServiceInfo from "./components/ServiceInfo/ServiceInfo";
 import { motion, useScroll } from "framer-motion";
 import CardsContainer from "./components/containers/Cards/CardsContainer";
-import ServiceInfo2 from "./components/containers/ServiceInfo2";
+import ServiceInfo2 from "./components/ServiceInfo/ServiceInfo2";
 import TypingAnimationComponent from "./components/containers/TypingAnimationComponent";
 
 import {  NavItems, Product, SubNavItems } from "./interfaces";
