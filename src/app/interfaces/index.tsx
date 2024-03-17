@@ -81,3 +81,7 @@ export interface HeaderProps {
     navItems: NavItems[];
     subNavItems: SubNavItems[][];
 }
+export interface TestimonialProps{
+    text: string;
+    name:string
+}

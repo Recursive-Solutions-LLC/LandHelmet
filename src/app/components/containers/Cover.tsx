@@ -9,9 +9,16 @@ const Cover: React.FC<CoverProps> = ({ title, srcDesktop, srcMobile }) => {
 
   return (
     <>
-      <div className="z-1 flex justify-center items-center h-96">
-        <h1 className="absolute text-5xl font-bold text-white">{title}</h1>
-        <Image src={imageSrc} alt="cover" width={1500} height={600} className="object-cover w-screen h-full" />
+      <div className="z-1   flex justify-center items-center h-96">
+        <h1 className="absolute text-white text-5xl font-bold">{title}</h1>
+
+        <Image
+         src={imageSrc}
+          alt="about-us-cover"
+          width={1500}
+          height={600}
+          className="   object-cover w-screen h-full"
+        />
       </div>
       <div className="my-8 mx-12 lg:mx-24 flex justify-between gap-12 md:gap-16 lg:gap-72 font-custom">
         <h2 className="ml-4 text-3xl lg:text-4xl font-semibold text-black">
