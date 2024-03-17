@@ -6,7 +6,7 @@ import Quote from "../app/components/containers/Quote";
 import Banner from "./components/containers/Banner";
 import ServiceInfo from "./components/ServiceInfo/ServiceInfo";
 import { motion, useScroll } from "framer-motion";
-import CardsContainer from "./components/containers/CardsContainer";
+import CardsContainer from "./components/containers/Cards/CardsContainer";
 import ServiceInfo2 from "./components/containers/ServiceInfo2";
 import TypingAnimationComponent from "./components/containers/TypingAnimationComponent";
 
@@ -106,10 +106,6 @@ export default function Home() {
     <p className=" mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu lobortis elementum nibh tellus molestie nunc non blandit massa. Nisl condimentum id venenatis a condimentum vitae sapien.</p>
     <p className="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu lobortis elementum nibh tellus molestie nunc non blandit massa. Nisl condimentum id venenatis a condimentum vitae sapien.</p>
   </div>);
-
-  //this is for testing the typing animation
-  const componentToType = <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>;
-  //const animatedText = <TypingAnimationComponent WrappedComponent={componentToType} typingSpeed={150} />;
 
   return (
     <>  <motion.div

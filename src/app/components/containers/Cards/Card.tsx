@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState, createRef } from "react";
-import { CardsModel } from "../model/Cards";
+import { CardsModel } from "./Cards.model";
 import Image from "next/image";
-import LinkedinIcon from "./icons/LinkedinIcon";
+import LinkedinIcon from "../icons/LinkedinIcon";
 
 const Card: React.FC<CardsModel> = (card: CardsModel) => {
     const [isVisible, setIsVisible] = useState(false);

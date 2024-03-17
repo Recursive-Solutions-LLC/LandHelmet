@@ -1,5 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { ServiceInfo2Model } from '../model/ServiceInfo2.model';
+import React, { useEffect, useRef, useState, JSX } from 'react';
+
+interface ServiceInfo2Model {
+  imageComponent: JSX.Element;
+  textComponent: JSX.Element;
+}
 
 const ServiceInfo2 = (model: ServiceInfo2Model) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -40,10 +44,10 @@ const ServiceInfo2 = (model: ServiceInfo2Model) => {
 
   return (
     <div className="grid my-3 grid-cols-1 md:grid-cols-2 justify-center max-w-2xl mx-auto">
-      <div ref={imageRef} className={`mr-2 transform transition-transform duration-1000 ${isVisible ? 'translate-x-0' : '-translate-x-full'}`}>
+      <div ref={imageRef} className={`mr-2 transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
         { React.cloneElement(imageComponent, { className: 'w-auto max-h-fit rounded-sm' }) }
       </div>
-      <div ref={textRef} className={`ml-2 transform transition-transform duration-1000 ${isVisible ? 'translate-x-0' : 'translate-x-full'}`}>
+      <div ref={textRef} className={`ml-2 transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
         { React.cloneElement(textComponent, { className: 'w-auto max-h-fit text-xl text-gray-800 w-2/3' }) }
       </div>
     </div>

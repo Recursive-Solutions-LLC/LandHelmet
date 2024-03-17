@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react";
-import { CardsProps } from "../model/Cards";
+import { CardsProps } from './Cards.model';
 import Card from "./Card";
 
 const CardsContainer: React.FC<CardsProps> = (cardsDetail: CardsProps) => {
