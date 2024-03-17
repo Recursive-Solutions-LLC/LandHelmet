@@ -25,8 +25,8 @@ const Card: React.FC<CardsModel> = (card: CardsModel) => {
 
 
     return (
-        <div className={`max-w-sm rounded overflow-hidden shadow-lg transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`} ref={ref}>
-            <Image className="w-full rounded-xl md:rounded-3xl object-cover object-center aspect-[3/4]" src={card.image} alt="character avatar" width={600} height={900}/>
+        <div className={`max-w-sm rounded overflow-hidden m-3 shadow-lg transition-opacity duration-500 hover:scale-105 ${isVisible ? 'opacity-100' : 'opacity-0'}`} ref={ref}>
+            <Image className=" w-full rounded-xl md:rounded-3xl object-cover object-center aspect-[3/4]" src={card.image} alt="character avatar" width={600} height={900}/>
             <div className="mt-4 flex justify-between">
                 <div className="px-6 py-4">
                     <div className="font-bold text-xl mb-2 text-black">{card.title}</div>
