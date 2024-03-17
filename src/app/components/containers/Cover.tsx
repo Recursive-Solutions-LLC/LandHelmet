@@ -23,7 +23,7 @@ const Cover: React.FC<CoverProps> = ({ title, srcDesktop, srcMobile }) => {
         <h1 className="absolute text-white text-5xl font-bold">{title}</h1>
 
         <Image
-          src={imageSrc}
+         src={imageSrc}
           alt="about-us-cover"
           width={1500}
           height={600}
