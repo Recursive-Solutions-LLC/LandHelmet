@@ -39,7 +39,7 @@ const ServiceInfo2 = (model: ServiceInfo2Model) => {
   }, []);
 
   return (
-    <div className="grid my-3 grid-cols-1 md:grid-cols-2 justify-center my-3">
+    <div className="grid my-3 grid-cols-1 md:grid-cols-2 justify-center max-w-2xl mx-auto">
       <div ref={imageRef} className={`mr-2 transform transition-transform duration-1000 ${isVisible ? 'translate-x-0' : '-translate-x-full'}`}>
         { React.cloneElement(imageComponent, { className: 'w-auto max-h-fit rounded-sm' }) }
       </div>
