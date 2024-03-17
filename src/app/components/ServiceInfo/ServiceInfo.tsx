@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import ServiceInfoContent from './ServiceInfoContent'
-import { ServiceInfoProps } from '@/app/interfaces/servicePage'
+import { ServiceInfoProps } from '@/app/interfaces/ServiceInterface'
 
 const ServiceInfo: FC<ServiceInfoProps> = (props) => {
     const { title, subtitle, text, image, callToAction } = props

@@ -1,8 +1,8 @@
-import { ServiceInfoContainerProps } from '@/app/interfaces/servicePage'
+import { ServiceInfoContainerProps } from '@/app/interfaces/ServiceInterface'
 import { motion } from 'framer-motion'
 import React, { FC } from 'react'
 
-const ServiceInfo: FC<ServiceInfoContainerProps> = ({ title, subtitle, text, hasImage }) => {
+const ServiceInfoContent: FC<ServiceInfoContainerProps> = ({ title, subtitle, text, hasImage }) => {
 
     const titleColor = hasImage ? "text-p2" : "text-s1"
     const titleClass = `font-title font-semibold text-4xl md:text-5xl lg:text-6xl ${titleColor} `
@@ -62,4 +62,4 @@ const ServiceInfo: FC<ServiceInfoContainerProps> = ({ title, subtitle, text, has
     )
 }
 
-export default ServiceInfo
+export default ServiceInfoContent

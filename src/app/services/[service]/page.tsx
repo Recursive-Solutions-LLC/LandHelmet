@@ -1,19 +1,33 @@
+
+import ServiceInfo from '@/app/components/ServiceInfo/ServiceInfo';
+import { Content, ServiceComponents } from '@/app/interfaces/ServiceInterface';
 import { promises as fs } from 'fs';
 
 export default async function ServicePage({ params }: { params: { service: string } }) {
   const file = await fs.readFile(process.cwd() + `/src/content/services/${params.service}.json`, 'utf8');
   const data = JSON.parse(file);
 
+  const serviceContent = data.content
 
-  // const renderServiceSections = data.map((item)=>{
-
-  //   return()
-  // })
+  const renderServiceSections = serviceContent.map((data: Content) => {
+    const {component, content} = data
+    if(component === ServiceComponents.info1){
+      return(
+        <ServiceInfo 
+        title={content.title} 
+        subtitle={content.subtitle}
+        text={content.text}
+        image={content.image}
+        key={content.title}
+        />
+      )
+    }
+   
+  })
 
   return (
     <>
-      <h1 className='text-p1'>{data.title}</h1>
-      <p className='text-p1'>{data.content}</p>
+      {renderServiceSections}
     </>
   );
 }
