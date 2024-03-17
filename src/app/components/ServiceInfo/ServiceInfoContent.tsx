@@ -1,4 +1,4 @@
-import { ServiceInfoContainerProps } from '@/app/interfaces'
+import { ServiceInfoContainerProps } from '@/app/interfaces/servicePage'
 import { motion } from 'framer-motion'
 import React, { FC } from 'react'
 
