@@ -1,5 +1,6 @@
 
 "use client"
+import React from "react";
 import ShowCase from "../app/components/containers/ShowCase";
 import Details from "../app/components/containers/Details";
 import Quote from "../app/components/containers/Quote";
@@ -8,7 +9,7 @@ import ServiceInfo from "./components/ServiceInfo/ServiceInfo";
 import { motion, useScroll } from "framer-motion";
 import CardsContainer from "./components/containers/Cards/CardsContainer";
 import ServiceInfo2 from "./components/containers/ServiceInfo2";
-import TypingAnimationComponent from "./components/containers/TypingAnimationComponent";
+import { TypingAnimationHOC2 } from "./components/containers/TypingAnimationComponent";
 
 import {  NavItems, Product, SubNavItems } from "./interfaces";
 
@@ -107,6 +108,16 @@ export default function Home() {
     <p className="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu lobortis elementum nibh tellus molestie nunc non blandit massa. Nisl condimentum id venenatis a condimentum vitae sapien.</p>
   </div>);
 
+  interface TypingData {
+    text: string;
+  }
+
+  const typingAnimationComponentModel: React.FC<TypingData> = ({ text }) => {
+    return <h1 className=" text-blue-400">{ text }</h1>
+  }
+
+  const TypingAnimation = TypingAnimationHOC2(typingAnimationComponentModel);
+
   return (
     <>  <motion.div
       className="progress-bar rounded-lg"
@@ -144,7 +155,7 @@ export default function Home() {
 
      <CardsContainer cards={cards} />
      <ServiceInfo2 imageComponent={mockServiceInfoImg} textComponent={mockServiceInfoText} />
-     {/* <TypingAnimationComponent WrappedComponent="Lorem ipsum dolor sit amet, consectetur adipiscing elit." typingSpeed={15000} /> */}
+     <TypingAnimation text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." speed={250} />
     </section>
 
     
