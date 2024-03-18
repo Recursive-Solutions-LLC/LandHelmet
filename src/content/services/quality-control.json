@@ -16,9 +16,9 @@
             "redirection": ""
           },
           "image": {
-            "alt": "",
-            "mobileSrc": "",
-            "DesktopSrc": ""
+            "alt": "an image of industrial machines",
+            "srcMobile": "/images/services/banners/quality/mobile/quality.png",
+            "srcDesktop": "/images/services/banners/quality/desktop/quality.png"
           }
         }
       },
@@ -26,23 +26,17 @@
         "component": "info1",
         "content": {
           "title": "ANSI Certification: Our Commitment to Safety",
-          "text": "Land Helmets are certified under the ANSI Z89.1-2014(R2019) standard, ensuring superior protection for industrial and construction environments. Our Type 1 and Type 2 helmets undergo extensive testing for impact and penetration resistance, providing reliable head protection for your workforce.",
-          "image": {
-            "alt": "",
-            "mobileSrc": "",
-            "DesktopSrc": ""
-          }
+          "text": "Land Helmets are certified under the ANSI Z89.1-2014(R2019) standard, ensuring superior protection for industrial and construction environments. Our Type 1 and Type 2 helmets undergo extensive testing for impact and penetration resistance, providing reliable head protection for your workforce."
         }
       },
       {
         "component": "info1",
         "content": {
           "title": "Streamlined Quality Control Process",
-          "text": "",
           "image": {
-            "alt": "",
-            "mobileSrc": "",
-            "DesktopSrc": ""
+            "alt": "Picture of a fabric with heavy machines",
+            "srcMobile": "/images/services/banners/quality/mobile/quality2.png",
+            "srcDesktop": "/images/services/banners/quality/desktop/quality2.png"
           }
         }
       },
@@ -53,8 +47,8 @@
           "text": "We offer a wide range of molds for helmet production alongside high-quality parts and accessories for OEM products. This service ensures efficiency and customization capability for your specific safety helmet needs.",
           "image": {
             "alt": "Images showing a variety of helmet molds and parts, emphasizing the range and quality.",
-            "mobileSrc": "",
-            "DesktopSrc": ""
+            "srcMobile": "",
+            "srcDesktop": ""
           }
         }
       },
@@ -62,11 +56,10 @@
         "component": "info1",
         "content": {
           "title": "Customization Meets Quality",
-          "text": "",
           "image": {
             "alt": "",
-            "mobileSrc": "",
-            "DesktopSrc": ""
+            "srcMobile": "/images/services/banners/quality/mobile/quality3.png",
+            "srcDesktop": "/images/services/banners/quality/desktop/quality3.png"
           }
         }
       },
@@ -77,8 +70,8 @@
           "text": "At Land Helmets, your safety and branding needs drive our innovation and quality control processes. Contact us to explore how our helmets can be tailored to your specific requirements while maintaining the highest safety standards.",
           "image": {
             "alt": "A compelling call-to-action image, inviting viewers to get in touch or explore further.",
-            "mobileSrc": "",
-            "DesktopSrc": ""
+            "srcMobile": "",
+            "srcDesktop": ""
           }
         }
       },
@@ -86,11 +79,10 @@
         "component": "info1",
         "content": {
           "title": "Quality Assurance in Customization",
-          "text": "",
           "image": {
             "alt": "",
-            "mobileSrc": "",
-            "DesktopSrc": ""
+            "srcMobile": "/images/services/banners/quality/mobile/quality5.png",
+            "srcDesktop": "/images/services/banners/quality/desktop/quality5.png"
           }
         }
       },
@@ -101,8 +93,8 @@
           "text": "Every Land Helmet is subjected to stringent quality control checks at each production stage. From initial design to final inspection, our helmets are tested to ensure they meet our high standards for safety, durability, and comfort.",
           "image": {
             "alt": "Photos or diagrams of testing procedures, such as impact tests, to visually communicate the rigorous testing process.",
-            "mobileSrc": "",
-            "DesktopSrc": ""
+            "srcMobile": "",
+            "srcDesktop": ""
           }
         }
       },
@@ -110,11 +102,10 @@
         "component": "info1",
         "content": {
           "title": "Innovation in Helmet Design",
-          "text": "",
           "image": {
             "alt": "",
-            "mobileSrc": "",
-            "DesktopSrc": ""
+            "srcMobile": "",
+            "srcDesktop": ""
           }
         }
       },
@@ -125,8 +116,8 @@
           "text": "Our helmets are designed for longevity, with a 10-year lifespan ensuring long-term reliability and protection. We prioritize durability and performance, ensuring each helmet remains effective throughout its service life.",
           "image": {
             "alt": "A timeline or infographic depicting the helmet's lifespan and key milestones in durability testing.",
-            "mobileSrc": "",
-            "DesktopSrc": ""
+            "srcMobile": "",
+            "srcDesktop": ""
           }
         }
       }

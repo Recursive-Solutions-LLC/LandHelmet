@@ -42,10 +42,10 @@ export default function RootLayout({
   ];
 
   return (
-    <html lang="en">
+    <html className="min-w-[100vw] overflow-x-hidden" lang="en">
       <link rel="icon" href="./favicon.ico" sizes="any" />
 
-      <body className={inter.className}>
+      <body className={`min-w-[100vw] overflow-x-hidden	 ${inter.className}`}>
         <Header navItems={navItems} subNavItems={subNavItems} />
         {children}
         <Footer />
