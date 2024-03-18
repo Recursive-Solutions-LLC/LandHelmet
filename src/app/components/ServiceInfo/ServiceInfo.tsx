@@ -1,3 +1,5 @@
+"use client"
+
 import React, { FC } from 'react'
 import ServiceInfoContent from './ServiceInfoContent'
 import { ServiceInfoProps } from '@/app/interfaces/ServiceInterface'
@@ -14,7 +16,7 @@ const ServiceInfo: FC<ServiceInfoProps> = (props) => {
 
     const sectionStyling = `w-svw  ${onlyTitleStyle} ${renderSectionBg}`
 
-    const hasImage = image ? true : false
+    const hasImage = image ? false : false
     return (
         <section className={sectionStyling}>
 

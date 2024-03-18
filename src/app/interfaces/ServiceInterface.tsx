@@ -1,14 +1,10 @@
 import { ImageType } from "."
 import { ReactNode } from 'react';
 
-export enum ServiceComponents{
-  cover,
-  info1,
-  info2
-}
+
 
 export interface Content {
-  component: ServiceComponents,
+  component: string,
   content: ServiceInfoProps
 }
 
@@ -18,6 +14,7 @@ export interface ServiceContent {
 
 export interface ServiceInfoProps extends ServiceInfoContentProps {
   image?: ImageType
+  isCover: boolean
 }
 export interface ServiceInfoContainerProps extends ServiceInfoContentProps {
   hasImage: boolean

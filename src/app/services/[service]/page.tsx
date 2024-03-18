@@ -1,6 +1,5 @@
-
 import ServiceInfo from '@/app/components/ServiceInfo/ServiceInfo';
-import { Content, ServiceComponents } from '@/app/interfaces/ServiceInterface';
+import { Content } from '@/app/interfaces/ServiceInterface';
 import { promises as fs } from 'fs';
 
 export default async function ServicePage({ params }: { params: { service: string } }) {
@@ -10,19 +9,32 @@ export default async function ServicePage({ params }: { params: { service: strin
   const serviceContent = data.content
 
   const renderServiceSections = serviceContent.map((data: Content) => {
-    const {component, content} = data
-    if(component === ServiceComponents.info1){
-      return(
-        <ServiceInfo 
-        title={content.title} 
-        subtitle={content.subtitle}
-        text={content.text}
-        image={content.image}
-        key={content.title}
+    const { component, content } = data
+    if (component === "cover") {
+      return (
+        <ServiceInfo
+        isCover={true}
+          title={content.title}
+          subtitle={content.subtitle}
+          text={content.text}
+          image={content.image}
+          key={content.title}
         />
       )
     }
-   
+    if (component === "info1") {
+      return (
+        <ServiceInfo
+        isCover={false}
+          title={content.title}
+          subtitle={content.subtitle}
+          text={content.text}
+          image={content.image}
+          key={content.title}
+        />
+      )
+    }
+
   })
 
   return (

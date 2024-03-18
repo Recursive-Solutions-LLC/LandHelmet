@@ -29,7 +29,7 @@ const ServiceInfoContent: FC<ServiceInfoContainerProps> = ({ title, subtitle, te
                 viewport={{ once: true }}
                 variants={variants}
                 transition={{ type: "linear", duration: 1.5 }}
-                className="col mt-14 font-bold text-lg leading-5 text-p1 font-title"
+                className="col mt-14 font-bold text-lg leading-5 text-s1 font-title"
             >
                 {subtitle}
             </motion.h6>
