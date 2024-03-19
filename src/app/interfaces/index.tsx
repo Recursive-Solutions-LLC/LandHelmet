@@ -1,21 +1,3 @@
-import { ReactNode } from 'react';
-
-export interface ServiceInfoProps extends ServiceInfoContentProps {
-    image?: ImageType
-}
-export interface ServiceInfoContainerProps extends ServiceInfoContentProps {
-
-    hasImage: boolean
-}
-
-export interface ServiceInfoContentProps {
-    title: string;
-    subtitle?: string;
-    text?: string;
-    callToAction?:  ReactNode
-}
-
-
 export type ImageType =  {
     srcDesktop: string;
     srcMobile: string;
@@ -80,4 +62,8 @@ export interface ShowCaseProps {
 export interface HeaderProps {
     navItems: NavItems[];
     subNavItems: SubNavItems[][];
+}
+export interface TestimonialProps{
+    text: string;
+    name:string
 }

@@ -9,7 +9,7 @@ import Image from "next/image";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="rounded-t rounded-xl shadow-2xl  bg-black w-full footer section "   style={{ backgroundImage: "url('/images/footer-bg.png')", }}
+    <footer className="shadow-2xl  bg-black w-full footer section "   style={{ backgroundImage: "url('/images/footer-bg.png')", }}
   >
   <div className="w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 lg:pt-20 mx-auto">
 

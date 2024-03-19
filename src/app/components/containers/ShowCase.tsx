@@ -85,7 +85,7 @@ const ShowCase: React.FC<ShowCaseProps> = ({
   return (
     <motion.div className="flex  flex-row items-center justify-between ">
       <motion.main>
-        <div className="z-10  w-[80svw] items-center justify-between font-mono lg:flex text-sm ">
+        <div className="z-10  w-[80%] items-center justify-between font-mono lg:flex text-sm ">
           {right ? (
             <>
               {renderImage}

@@ -1,22 +1,33 @@
-import { ServiceInfoProps } from '@/app/interfaces'
+"use client"
+
 import React, { FC } from 'react'
 import ServiceInfoContent from './ServiceInfoContent'
+import { ServiceInfoProps } from '@/app/interfaces/ServiceInterface'
 
 const ServiceInfo: FC<ServiceInfoProps> = (props) => {
-    const { title, subtitle, text, image, callToAction } = props
-    const renderSectionBg = image ? ` bg-cover
-    md:bg-[url('/images/services/banners/quality/desktop/quality.png')]
-    bg-[url('/images/services/banners/quality/mobile/quality.png')]
+    // TODO: add responsiveness 
+    const { title, subtitle, text, image, callToAction, isCover } = props
+    console.log('%csrc/app/components/ServiceInfo/ServiceInfo.tsx:9 image',
+        'color: white; background-color: #007acc;', image);
+    const backgroundStyle = image ? {
+        backgroundImage: `url('${image.srcDesktop}')`,
+        backgroundSize: 'cover',
+    } : {
 
-    ` : " bg-s3"
+        backgroundColor: '#EDEAE0',
+    };
+    const onlyTitle = (title && !subtitle && !text) ? true : false
+    const onlyTitleStyle = onlyTitle ? "pb-32 pt-25vh" : "py-32"
 
-    const sectionStyling = `w-svw py-32 ${renderSectionBg}`
+    const sectionStyling = `w-full  bg-cover ${onlyTitleStyle}`
 
-    const hasImage = image ? true : false
+    const hasImage = image ? false : false
     return (
-        <section className={sectionStyling}>
+        <section
+            style={backgroundStyle}
+            className={sectionStyling}>
 
-            <div className="mx-auto container container-padding">
+            <div className="mx-auto  container container-padding">
                 <div className="">
 
                 </div>

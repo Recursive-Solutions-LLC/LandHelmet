@@ -1,12 +1,11 @@
-import { ServiceInfoContainerProps } from '@/app/interfaces'
+import { ServiceInfoContainerProps } from '@/app/interfaces/ServiceInterface'
 import { motion } from 'framer-motion'
 import React, { FC } from 'react'
 
-const ServiceInfo: FC<ServiceInfoContainerProps> = ({ title, subtitle, text, hasImage }) => {
+const ServiceInfoContent: FC<ServiceInfoContainerProps> = ({ title, subtitle, text, hasImage }) => {
 
-    const onlyTitle = (title && !subtitle && !text) && "pt-25vh"
     const titleColor = hasImage ? "text-p2" : "text-s1"
-    const titleClass = `font-title font-semibold	text-5xl lg:text-6xl xl:text-8xl ${titleColor}   ${onlyTitle}`
+    const titleClass = `font-title font-semibold text-4xl md:text-5xl lg:text-6xl ${titleColor} `
     const variants = {
         hidden: { opacity: 0, x: 0, y: 200 },
         enter: { opacity: 1, x: 0, y: 0 },
@@ -30,7 +29,7 @@ const ServiceInfo: FC<ServiceInfoContainerProps> = ({ title, subtitle, text, has
                 viewport={{ once: true }}
                 variants={variants}
                 transition={{ type: "linear", duration: 1.5 }}
-                className="col mt-14 font-bold text-lg leading-5 text-p1 font-title"
+                className="col mt-14 font-bold text-lg leading-5 text-s1 font-title"
             >
                 {subtitle}
             </motion.h6>
@@ -42,7 +41,7 @@ const ServiceInfo: FC<ServiceInfoContainerProps> = ({ title, subtitle, text, has
         <motion.div
             initial="hidden"
             whileInView="enter"
-            viewport={{ once: true }} 
+            viewport={{ once: true }}
             variants={variants}
             className=" flex flex-col justify-between"
 
@@ -63,4 +62,4 @@ const ServiceInfo: FC<ServiceInfoContainerProps> = ({ title, subtitle, text, has
     )
 }
 
-export default ServiceInfo
+export default ServiceInfoContent
