@@ -2,9 +2,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "./components/Layout/Header";
+import Header  from "./components/Layout/Header";
 import Footer from "./components/Layout/Footer";
-import { NavItems, SubNavItems } from "./interfaces";
+import { HeaderLink } from "./interfaces";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,20 +25,29 @@ export default function RootLayout({
 }>) {
 
 
-  const navItems: NavItems[] = [
-    { title: "Home", link: "/" },
-    { title: "About Us", link: "/about-us" },
-  ];
-
-  const subNavItems: SubNavItems[][] = [
-    [
-      { title: "Lore Ipsum", link: "/sub-item-1" },
-      { title: "Lore Ipsum", link: "/sub-item-2" },
-    ],
-    [
-      { title: "Lore Ipsum", link: "/sub-item-3" },
-      { title: "Lore Ipsum", link: "/sub-item-4" },
-    ]
+  const headerLinks:HeaderLink[]=[
+    {  
+      title: "Home", 
+      link: "/", 
+      sublinks:[
+        { title: "Lorem Ipsum", link: "/sub-item-1" },
+        { title: "Lorem Ipsum", link: "/sub-item-2" },
+      ],
+      subtitle: "Lorem Ipsum is simply dummy text.",
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      img:"/images/service.jpg"
+    },
+    {  
+      title: "About Us", 
+      link: "/about-us", 
+      sublinks:[
+        { title: "Lore Ipsum", link: "/sub-item-1" },
+        { title: "Lore Ipsum", link: "/sub-item-2" },
+      ],
+      subtitle: "Lorem Ipsum is simply dummy text.",
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      img:"/images/service.jpg"
+    },
   ];
 
   return (
@@ -46,7 +55,7 @@ export default function RootLayout({
       <link rel="icon" href="./favicon.ico" sizes="any" />
 
       <body className={`min-w-[100vw] overflow-x-hidden	 ${inter.className}`}>
-        <Header navItems={navItems} subNavItems={subNavItems} />
+        <Header headerLinks={headerLinks} />
         {children}
         <Footer />
       </body>

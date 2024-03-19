@@ -58,12 +58,25 @@ export interface ShowCaseProps {
     right: boolean;
 }
 
-
-export interface HeaderProps {
-    navItems: NavItems[];
-    subNavItems: SubNavItems[][];
-}
 export interface TestimonialProps{
     text: string;
     name:string
+}
+
+export interface HeaderProps {
+    headerLinks:HeaderLink[]
+}
+
+export interface HeaderLink{
+    title:string;
+    link:string;
+    sublinks:Sublink[];
+    subtitle: string;
+    text:string;
+    img:string;
+}
+
+interface Sublink{
+    title:string;
+    link:string;
 }

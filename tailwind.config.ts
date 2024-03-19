@@ -16,7 +16,9 @@ const config: Config = {
         "p2": "#FFFFFF",
         "s1": "#22577A",
         "s2": "#000000",
-        "s3": "#EDEAE0"
+        "s3": "#EDEAE0",
+        "gold":"#FFD700",
+        "lightgold":"#FFD70070"
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

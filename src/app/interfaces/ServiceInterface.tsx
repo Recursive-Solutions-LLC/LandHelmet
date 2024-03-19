@@ -1,8 +1,6 @@
 import { ImageType } from "."
 import { ReactNode } from 'react';
 
-
-
 export interface Content {
   component: string,
   content: ServiceInfoProps
