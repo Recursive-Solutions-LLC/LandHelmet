@@ -104,8 +104,8 @@ export default function Home() {
   const mockServiceInfoText = (
   <div>
     <h1 className="text-black mb-2">LOREM IPSUM</h1>
-    <p className=" mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu lobortis elementum nibh tellus molestie nunc non blandit massa. Nisl condimentum id venenatis a condimentum vitae sapien.</p>
-    <p className="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu lobortis elementum nibh tellus molestie nunc non blandit massa. Nisl condimentum id venenatis a condimentum vitae sapien.</p>
+    <p className=" mb-2 text-red-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu lobortis elementum nibh tellus molestie nunc non blandit massa. Nisl condimentum id venenatis a condimentum vitae sapien.</p>
+    <p className="text-yellow-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu lobortis elementum nibh tellus molestie nunc non blandit massa. Nisl condimentum id venenatis a condimentum vitae sapien.</p>
   </div>);
 
   interface TypingData {
